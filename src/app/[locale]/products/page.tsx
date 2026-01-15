@@ -5,7 +5,7 @@ export default function ProductsPage() {
   return (
     <main className="container mx-auto px-4">
       <CategoryTabs />
-      <ProductCard />
+      <ProductCard />hhh
     </main>
   );
 }
