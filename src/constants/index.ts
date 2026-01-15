@@ -1,3 +1,1 @@
-export const DOMAIN = process.env.VITE_API_URL
-export const CATEGORIES = 'categories/'
-export const PRODUCTS = 'products/'
+export const DOMAIN = process.env.NEXT_PUBLIC_API_URL

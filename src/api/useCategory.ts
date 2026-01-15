@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { CATEGORIES, DOMAIN } from "../constants";
+import { DOMAIN } from "../constants";
 import request from "../services";
 
 export const useGetCategories = () => {
@@ -8,7 +8,7 @@ export const useGetCategories = () => {
         queryFn: async () => {
             try {
                 const res = await request.get(
-                    `https://powertech-uzbekistan.uz/categories/`
+                    `${DOMAIN}categories/`
                 );                
                 return res?.data ?? [];
 

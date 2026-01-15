@@ -1,12 +1,13 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import request from "../services";
+import { DOMAIN } from "../constants";
 
 export const usePostUsers = () => {
     const qc = useQueryClient();
 
     return useMutation({
         mutationFn: async (payload: any) => {
-            const url = `https://powertech-uzbekistan.uz/contacts/`;
+            const url = `${DOMAIN}contacts/`;
 
             const res = await request.post(url, payload, {
                 headers: {

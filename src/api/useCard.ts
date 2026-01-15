@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { DOMAIN, PRODUCTS } from "../constants";
+import { DOMAIN } from "../constants";
 import request from "../services";
 
 interface FilterParams {
@@ -19,7 +19,7 @@ export const useGetProducts = () => {
         queryFn: async () => {
             try {
                 const res = await request.get(
-                    `https://powertech-uzbekistan.uz/products/`
+                    `${DOMAIN}products/`
                 );
                 return res?.data ?? [];
 
@@ -37,8 +37,8 @@ export const useGetFilteredProducts = (filters: FilterParams) => {
 
     const queryString = queryParams.toString();
     const url = queryString
-        ? `https://powertech-uzbekistan.uz/products/?${queryString}`
-        : `https://powertech-uzbekistan.uz/products/`;
+        ? `${DOMAIN}products/?${queryString}`
+        : `${DOMAIN}products/`;
 
     return useQuery({
         queryKey: ["products", filters],
@@ -62,7 +62,7 @@ export const useGetProductsById = (id: string) => {
             if (!id) return null;
 
             try {
-                const url = `https://powertech-uzbekistan.uz/products/${id}/`;
+                const url = `${DOMAIN}products/${id}/`;
                 const res = await request.get(url);
                 return res?.data ?? null;
             } catch (error) {
