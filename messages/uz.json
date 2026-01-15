@@ -1,0 +1,49 @@
+{
+    "contact": "BIZ BILAN BOG'LANISH",
+    "category": "Mahsulot Kategoriyalari",
+    "all_products": "Barcha mahsulotlar",
+    
+    "about_cards": "Nima uchun Powertech avtomatlashtirishni tanlaysiz?",
+    "about_card_title1": "Powertech avtomatikasi to‘liq komplektda yetkaziladi",
+    "about_card_description1": "Biz to'liq avtomatlashtirish tizimlarini yetkazib beramiz: drayvlar, boshqaruv bloklari, masofadan boshqarish pultlari, xavfsizlik elementlari va aqlli modul - barchasi bitta qutida.",
+    "about_card_title2": "Smart boshqaruv allaqachon bazada",
+    "about_card_description2": "Wi-Fi + Bluetooth moduli kiritilgan.",
+    "about_card_decription2_1":"Powertech uskunasi qo‘shimcha modullar yoki modifikatsiyalarsiz smartfonni boshqarish va darvozalarni kuzatishga tayyor.",
+    "about_card_title3": "Kundalik foydalanish uchun ishonchlilik",
+    "about_card_description3": "Powertech avtomatlashtirish tizimlari doimiy yuklar va turar-joy va tijorat ob'ektlarida barqaror ishlash uchun mo'ljallangan.",
+    "about_card_description3_1": "Uskunalar haqiqiy ish sharoitlarini hisobga olgan holda ishlab chiqilgan.",
+    "about_card_title4": "Muayyan ob'ekt uchun tanlov",
+    "about_card_description4": "Biz “bir o‘lchamli” yechimni sotmaymiz.",
+    "about_card_description4_1": "To'plamlar eshik turi, og'irligi, kengligi va foydalanish rejimiga qarab tanlanadi, bu to'g'ri va uzoq muddatli ishlashni ta'minlaydi.",
+
+    "map_title": "Bizning joylashuvimiz",
+
+    "footer_description": "Zamonaviy korxonalar uchun professional texnik echimlar. Mutaxassis yordami bilan qo'llab-quvvatlangan sifatli mahsulotlar.",
+    "footer_title": "Aloqa",
+    "footer_socials": "BIZNI KUZATING",
+    "footer_copyright":"Mualliflik huquqi © 2026 Powertech Automation Inc. Barcha huquqlar himoyalangan.",
+
+    "product_request":"So'rov yuborish",
+    "product_specifications": "Uskuna xususiyatlari",
+    "product_ports": "Portlar",
+    "product_capacity": "Kommutatsiya quvvati",
+    "product_address_table": "MAC manzillar jadvali",
+    "product_dimensions": "O'lchamlari",
+    "product_network_features": "Tarmoq xususiyatlari",
+    "product_support": "VLAN qo'llab-quvvatlash",
+    "product_flow_control": "Oqim nazorati",
+    "product_frame": "Jumbo ramka",
+    "product_title": "Nom",
+    "product_description": "TAVSIF",
+
+    "contact_us": "Bizga xabar yuboring",
+    "contact_name": "Ism",
+    "contact_last_name": "Familiya",
+    "contact_email": "Email*",
+    "contact_phone": "Telefon raqami",
+    "contact_company_name": "Kompaniya nomi",
+    "contact_message": "Tavsif*",
+    "contact_submit": "Yuborish",
+
+    "seo": "Powertech Automation — yopiq va ochiq darvozalar, garaj eshiklarini avtomatlashtirish bo‘yicha ilg‘or AI va IoT yechimlarini taklif qiluvchi yetakchi kompaniya. Bizning smart qurilmalar va Eyeopen ilovasi orqali eshiklarni real vaqt rejimida boshqarish, xavfsizlik va qulaylikka erishing."
+}
