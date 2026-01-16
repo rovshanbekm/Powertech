@@ -49,7 +49,7 @@ export const ProductCard = () => {
                     <Link
                         href={`/products/${item.id}`}
                         key={item.id}
-                        className=" border flex flex-col overflow-hidden"
+                        className="flex flex-col overflow-hidden"
                     >
                         <img
                             className="w-full h-auto object-cover "
