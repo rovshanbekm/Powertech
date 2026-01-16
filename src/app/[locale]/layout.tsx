@@ -3,6 +3,7 @@ import { Header } from "@/src/components/header";
 import { routing } from "@/src/i18n/routing";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
+import { ToastContainer } from 'react-toastify';
 
 export default async function LocaleLayout({
   children,
@@ -22,6 +23,7 @@ export default async function LocaleLayout({
         <Header />
         {children}
         <Footer />
+        <ToastContainer />
       </NextIntlClientProvider>
     </div>
   );

@@ -46,5 +46,7 @@
     "contact_message": "Tavsif*",
     "contact_submit": "Yuborish",
 
-    "seo": "Powertech Automation — yopiq va ochiq darvozalar, garaj eshiklarini avtomatlashtirish bo‘yicha ilg‘or AI va IoT yechimlarini taklif qiluvchi yetakchi kompaniya. Bizning smart qurilmalar va Eyeopen ilovasi orqali eshiklarni real vaqt rejimida boshqarish, xavfsizlik va qulaylikka erishing."
+    "seo": "Powertech Automation — yopiq va ochiq darvozalar, garaj eshiklarini avtomatlashtirish bo‘yicha ilg‘or AI va IoT yechimlarini taklif qiluvchi yetakchi kompaniya. Bizning smart qurilmalar va Eyeopen ilovasi orqali eshiklarni real vaqt rejimida boshqarish, xavfsizlik va qulaylikka erishing.",
+
+    "success_message": "Xabar muvaffaqiyatli yuborildi"
 }

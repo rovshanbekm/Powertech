@@ -7,6 +7,7 @@ import { Textarea } from "@/src/components/ui/textarea";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form"
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 type FormValues = {
   name: string;
@@ -20,7 +21,7 @@ type FormValues = {
 };
 
 export const Contact = () => {
-  const { handleSubmit, register, watch, setValue } = useForm<FormValues>({
+  const { handleSubmit, register, watch, setValue, reset } = useForm<FormValues>({
     defaultValues: { name: '', lastname: '', company: '', phone: '', address: '', email: '', message_subject: '', message: '' }
   })
   const { mutate: postContact } = usePostUsers()
@@ -59,10 +60,11 @@ export const Contact = () => {
     };
     postContact(payload, {
       onSuccess: () => {
-        alert("Xabar muvaffaqiyatli yuborildi")
+        toast.success(t("success_message"))
+        reset({ name: '', lastname: '', company: '', phone: '', address: '', email: '', message_subject: '', message: '' })
       },
       onError: (error: any) => {
-        alert("Xabar yuborishda xatolik yuz berdi: " + error.message)
+        toast.error("Xabar yuborishda xatolik yuz berdi: " + error.message)
       }
     })
   }

@@ -7,15 +7,15 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link"
 import { useTranslations } from "next-intl"
 import Bg from "../BgImage"
-import { useSelectedLayoutSegment } from "next/navigation"
+import { usePathname, useSelectedLayoutSegment } from "next/navigation"
 
 export const Header = () => {
   const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const t = useTranslations()
-  const segment = useSelectedLayoutSegment()
-  const isHome = segment === null
+  const pathname = usePathname()
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,7 +39,7 @@ export const Header = () => {
         className={`
         bg-mainColor w-full py-[9px] mt-7.5
         md:py-7.5 md:mt-0
-        ${isHome && "absolute top-[1px] z-2"}
+         ${isHome ? "absolute top-[1px] z-20" : "relative"}
         md:relative md:top-0
       `}
       >
@@ -50,7 +50,7 @@ export const Header = () => {
             <Link href={"/"}><Image src={Powertech} alt="Powetech" className="w-[158px] h-[15px] md:w-[261px] md:h-[25px]" /></Link>
 
             <div className="flex md:gap-12.5">
-              <Link href={"/contact"} onClick={() => setMenuOpen(false)} className="text-2xl text-white hidden md:block">{t("contact")}</Link>
+              <Link href={"/contact"} onClick={() => setMenuOpen(false)} className="text-2xl z-50 text-white hidden md:block">{t("contact")}</Link>
               <LanguageMenu />
 
               <button

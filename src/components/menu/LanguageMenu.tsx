@@ -15,8 +15,8 @@ export const LanguageMenu = () => {
   const router = useRouter();
   const pathName = usePathname();
 
-  const changeLanguage = (newLanguage: string) => {
-    router.push(pathName, { locale: newLanguage });
+  const changeLanguage = (newLocale: string) => {
+    router.replace(pathName, { locale: newLocale });
   };
   return (
     <DropdownMenu>
