@@ -29,7 +29,7 @@ export const Footer = () => {
 
                         </div>
                         <div className="flex flex-col gap-5 items-center">
-                            <h3 className="font-semibold text-[18px] lg:text-[22px] text-white hidden md:block">{t("footer_socials")}</h3>
+                            <h3 className="font-semibold text-[18px] xl:text-[22px] text-white hidden md:block">{t("footer_socials")}</h3>
                             <div className="flex gap-2 md:gap-4.5 ">
                                 <Link href={"/"}><Image src={Facebook} alt="Facebook" className="w-5.5 md:w-8" /></Link>
                                 <Link href={"/"}><Image src={YouTube} alt="YouTube" className="w-5.5 md:w-8" /></Link>

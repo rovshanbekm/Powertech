@@ -11,6 +11,11 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+type ProductItems = {
+    name: string
+    description: string
+}
+
 const ProductDetail = () => {
     const params = useParams();
     const id = typeof params.id === "string" ? params.id : "";
@@ -83,25 +88,17 @@ const ProductDetail = () => {
                 </div>
             </motion.div>
             <div className="flex flex-col gap-5 md:gap-7.5 mt-7.5 md:mt-12.5">
-                <Table
-                    title={t("product_specifications")}
-                    rows={[
-                        { label: t("product_ports"), value: "8× 10/100/1000Mbps RJ45" },
-                        { label: t("product_capacity"), value: "16 Gbps" },
-                        { label: t("product_address_table"), value: "8K" },
-                        { label: t("product_dimensions"), value: "158 × 101 × 25 mm" },
-                    ]}
-                />
+                {data?.specifications?.map((spec:any, index:any) => (
+                    <Table
+                        key={index}
+                        title={spec.title}
+                        rows={spec.items.map((item:ProductItems) => ({
+                            label: item.name,
+                            value: item.description,
+                        }))}
+                    />
+                ))}
 
-                <Table
-                    title={t("product_network_features")}
-                    rows={[
-                        { label: t("product_support"), value: "802.1Q tegga asoslangan VLAN" },
-                        { label: "QoS", value: "802.1p/DSCP ustuvorligi" },
-                        { label: t("product_flow_control"), value: "802.3x to'liq dupleks" },
-                        { label: t("product_frame"), value: "9 KB gacha" },
-                    ]}
-                />
             </div>
             <div className="pt-12.5">
                 <ProductCard />
