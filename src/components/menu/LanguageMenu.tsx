@@ -22,9 +22,9 @@ export const LanguageMenu = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className="rounded-full bg-transparent focus-visible:ring-0 hover:bg-transparent cursor-pointer [&_svg:not([class*='size-'])]:size-[30px]"
+          className="rounded-full bg-transparent text-[13px] md:text-2xl focus-visible:ring-0 hover:bg-transparent cursor-pointer [&_svg:not([class*='size-'])]:size-[30px]"
         >
-          <Globe size={32} /> {locale?.toUpperCase()}
+          <Globe className="w-[23px] h-[23px] md:w-8 md:h-8" /> {locale?.toUpperCase()}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-mainColor border-selectBorderColor">

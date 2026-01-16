@@ -76,19 +76,19 @@ export const Contact = () => {
           duration: 0.5,
           ease: "easeOut",
         }}
-        className="border rounded-[30px] w-[675px] shadow-[2px_2px_6px_2px_#0000000D] py-8.75 px-12.5 mt-12.5"
+        className="border rounded-[30px] w-[675px] shadow-[2px_2px_6px_2px_#0000000D] py-[25px] px-5 md:py-8.75 md:px-12.5 mt-7.5 md:mt-12.5"
       >
-        <h3 className="font-semibold text-[40px] text-mainColor flex justify-center">{t("contact_us")}</h3>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 pt-12.5">
-          <div className="flex gap-3.75">
-            <Input {...register("name", { required: "Ism kiritilishi majburiy" })} type="text" placeholder={t("contact_name")} className={`rounded-[20px] h-14 px-4  placeholder:text-base placeholder:leading-6 ${!watch("name") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} />
-            <Input {...register("lastname", { required: "Familiya kiritilishi majburiy" })} type="text" placeholder={t("contact_last_name")} className={`rounded-[20px] h-14 px-4  placeholder:text-base placeholder:leading-6 ${!watch("lastname") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} />
+        <h3 className="font-semibold text-[26px] md:text-[40px] text-mainColor flex justify-center">{t("contact_us")}</h3>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3.75 md:gap-5 pt-10 md:pt-12.5">
+          <div className="flex flex-col md:flex-row gap-3.75">
+            <Input {...register("name", { required: "Ism kiritilishi majburiy" })} type="text" placeholder={t("contact_name")} className={`rounded-[15px] md:rounded-[20px] h-9.5 md:h-14 px-4 placeholder:text-[12px] md:placeholder:text-base placeholder:leading-6 ${!watch("name") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} />
+            <Input {...register("lastname", { required: "Familiya kiritilishi majburiy" })} type="text" placeholder={t("contact_last_name")} className={`rounded-[15px] md:rounded-[20px] h-9.5 md:h-14 px-4 placeholder:text-[12px] md:placeholder:text-base placeholder:leading-6 ${!watch("lastname") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} />
           </div>
-          <Input {...register("email", { required: "Email kiritilishi majburiy" })} type="email" placeholder={t("contact_email")} className={`rounded-[20px] h-14 px-4  placeholder:text-base placeholder:leading-6 ${!watch("email") ? "border" : "border-selectBorderColor text-selectBorderColor "}`} />
-          <Input {...register("phone", { required: "Phone kiritilishi majburiy" })} onChange={handlePhoneChange} type="tel" placeholder={t("contact_phone")} className={`rounded-[20px] h-14 px-4  placeholder:text-base placeholder:leading-6 ${!watch("phone") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} />
-          <Input {...register("company", { required: "Kompaniya nomi kiritilishi majburiy" })} type="text" placeholder={t("contact_company_name")} className={`rounded-[20px] h-14 px-4  placeholder:text-base placeholder:leading-6 ${!watch("company") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} />
-          <Textarea {...register("message", { required: "Tavsif kiritilishi majburiy" })} className={`placeholder:text-base placeholder:leading-6 py-4 px-4 rounded-[20px] h-[105px] ${!watch("message") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} placeholder={t("contact_message")} />
-          <Button type="submit" className="font-semibold cursor-pointer text-base text-white bg-mainColor hover:bg-mainColor h-11.25 rounded-[15px] mt-7.5">{t("contact_submit")}</Button>
+          <Input {...register("email", { required: "Email kiritilishi majburiy" })} type="email" placeholder={t("contact_email")} className={`rounded-[15px] md:rounded-[20px] h-9.5 md:h-14 px-4 placeholder:text-[12px] md:placeholder:text-base placeholder:leading-6 ${!watch("email") ? "border" : "border-selectBorderColor text-selectBorderColor "}`} />
+          <Input {...register("phone", { required: "Phone kiritilishi majburiy" })} onChange={handlePhoneChange} type="tel" placeholder={t("contact_phone")} className={`rounded-[15px] md:rounded-[20px] h-9.5 md:h-14 px-4 placeholder:text-[12px] md:placeholder:text-base placeholder:leading-6 ${!watch("phone") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} />
+          <Input {...register("company", { required: "Kompaniya nomi kiritilishi majburiy" })} type="text" placeholder={t("contact_company_name")} className={`rounded-[15px] md:rounded-[20px] h-9.5 md:h-14 px-4 placeholder:text-[12px] md:placeholder:text-base placeholder:leading-6 ${!watch("company") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} />
+          <Textarea {...register("message", { required: "Tavsif kiritilishi majburiy" })} className={`placeholder:text-[12px] md:placeholder:text-base placeholder:leading-6 py-4 px-4 rounded-[15px] md:rounded-[20px] h-21 md:h-[105px] ${!watch("message") ? "border" : "border-selectBorderColor text-selectBorderColor"}`} placeholder={t("contact_message")} />
+          <Button type="submit" className="font-semibold cursor-pointer text-base text-white bg-mainColor hover:bg-mainColor h-11.25 rounded-[15px] md:rounded-[15px] mt-[25px] md:mt-7.5">{t("contact_submit")}</Button>
         </form>
       </motion.div>
 

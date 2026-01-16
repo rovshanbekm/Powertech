@@ -17,7 +17,7 @@ export default async function LocaleLayout({
   }
   const messages = (await import(`../../../messages/${locale}.json`)).default;
   return (
-    <div className="page-root">
+    <div>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <Header />
         {children}

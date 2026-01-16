@@ -15,9 +15,9 @@ export const YandexMap = ({
     const t = useTranslations()
     return (
         <div>
-            <div className="flex flex-col justify-center items-center mt-27.5 mb-12.5">
-                <h3 className="font-semibold text-[34px] text-titleColor">{t("map_title")}</h3>
-                <div className="h-px w-35 bg-lineColor mt-[14px]"></div>
+            <div className="flex flex-col justify-center items-center mt-25 md:mt-27.5 mb-7.5 md:mb-12.5">
+                <h3 className="font-semibold text-[20px] md:text-[34px] text-titleColor">{t("map_title")}</h3>
+                <div className="h-px w-25 md:w-35 bg-lineColor mt-[14px]"></div>
             </div>
             <YMaps>
                 <Map

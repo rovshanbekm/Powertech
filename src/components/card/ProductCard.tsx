@@ -44,27 +44,27 @@ export const ProductCard = () => {
         <div ref={ref}
             className={`transition-all duration-1000 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}>
-            <div className="grid grid-cols-4 gap-[15px] pt-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] pt-7.5 md:pt-12.5">
                 {list?.map((item: any) => (
                     <Link
                         href={`/products/${item.id}`}
                         key={item.id}
-                        className="w-[293px] h-[277px]"
+                        className=" border flex flex-col overflow-hidden"
                     >
                         <img
-                            className="w-full object-cover rounded-t-[12px] max-h-[157px] h-full"
+                            className="w-full h-auto object-cover "
                             src={`${item?.image}`}
                             alt={item?.title}
                         />
-                        <div className="flex flex-col gap-2.5  p-2.5">
+                        <div className="flex flex-col  md:gap-1.5 p-2.5">
                             <h2 className="font-medium text-sm text-secondColor line-clamp-1">
                                 {item?.title}
                             </h2>
-                            {item.description && (
+                            {/* {item.description && (
                                 <p className="text-[12px] text-placeholderColor line-clamp-1">
                                     {item.description}
                                 </p>
-                            )}
+                            )} */}
                             <div className="flex items-center justify-between">
                                 <h4 className="font-semibold text-[12px] 2xs:text-sm sm:text-[15px] text-mainColor">
                                     {Number(item?.price).toLocaleString("uz-UZ")} so‘m

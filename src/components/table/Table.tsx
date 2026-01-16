@@ -37,7 +37,7 @@ export function Table({ title, rows }: Props) {
             className={`transition-all duration-1000 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}>
             <div className="w-full rounded-2xl border border-bgSepColor bg-tableBgColor overflow-hidden">
-                <div className="px-6 py-4 text-base font-medium text-titleColor">
+                <div className="px-6 py-4 font-semibold text-[20px] text-center md:text-start md:text-base md:font-medium text-titleColor">
                     {title}
                 </div>
 
@@ -50,7 +50,7 @@ export function Table({ title, rows }: Props) {
                     {rows.map((row, i) => (
                         <div
                             key={i}
-                            className="grid grid-cols-2 bg-tableBgColor text-sm text-titleColor border-t border-bgSepColor"
+                            className="grid grid-cols-2 bg-tableBgColor text-[13px] md:text-sm text-descriptionColor border-t border-bgSepColor"
                         >
                             <div className="px-6 py-4 border-r border-bgSepColor">
                                 {row.label}

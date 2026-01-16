@@ -37,10 +37,22 @@ const ProductDetail = () => {
                 transition={{
                     duration: 0.5,
                     ease: "easeOut",
-                }} className="flex flex-col mt-12.5 gap-24.5">
-                <div className=" flex gap-14.25">
-                    <div className="h-79 bg-imgBgColor w-140.75 border relative rounded-[15px] overflow-hidden">
+                }} className="flex flex-col mt-12.5 gap-12.5 xl:gap-24.5">
+                <div className=" flex flex-col md:flex-row gap-5 md:gap-14.25">
+                    <div className="h-[322px] md:h-79 bg-imgBgColor md:w-120 xl:w-140.75 border relative rounded-[15px] overflow-hidden">
                         <img src={mainMedia || data?.images?.[0].image} className="w-full h-full object-contain" />
+                    </div>
+                    <div className="flex md:hidden gap-[5px] w-full pt-2.5 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
+                        {data?.images?.map((i: any) => (
+                            <div
+                                key={i.id}
+                                className={` shrink-0 w-18.5 h-18.5 md:w-20 md:h-20 rounded-2xl cursor-pointer flex items-center justify-center ${mainMedia === i.image && "border-selectBorderColor border-2"
+                                    }`}
+                                onClick={() => setMainMedia(i.image)}
+                            >
+                                <img src={i.image} className="w-full h-full object-contain rounded-2xl" />
+                            </div>
+                        ))}
                     </div>
                     <div className="flex flex-col gap-5">
                         <h1 className="text-[30px] font-semibold">{data?.title}</h1>
@@ -52,11 +64,11 @@ const ProductDetail = () => {
                     </div>
                 </div>
                 <div className="flex justify-between items-end gap-14.25">
-                    <div className="flex gap-4.25 pt-2.5">
+                    <div className="md:flex gap-[5px] xl:gap-4.25 pt-2.5 hidden">
                         {data?.images?.map((i: any) => (
                             <div
                                 key={i.id}
-                                className={`w-20 h-20 rounded-2xl cursor-pointer flex items-center justify-center ${mainMedia === i.image && "border-selectBorderColor border-2"
+                                className={`w-18.5 xl:w-20 h-18.5 xl:h-20 rounded-2xl cursor-pointer flex items-center justify-center ${mainMedia === i.image && "border-selectBorderColor border-2"
                                     }`}
                                 onClick={() => setMainMedia(i.image)}
                             >
@@ -64,13 +76,13 @@ const ProductDetail = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="flex flex-col gap-5">
-                        <Link href={"/contact"}><Button className="w-150 cursor-pointer h-11 rounded-[22px] bg-mainColor text-white hover:bg-mainColor font-semibold text-lg leading-11">{t("product_request")}</Button></Link>
-                        <Separator className=" bg-bgSepColor h-px" />
+                    <div className="flex flex-col gap-5 w-full">
+                        <Link href={"/contact"}><Button className="!w-full h-[38px] md:w-150 cursor-pointer md:h-11 rounded-[22px] bg-mainColor text-white hover:bg-mainColor font-semibold text-lg leading-11">{t("product_request")}</Button></Link>
+                        <Separator className=" bg-bgSepColor h-px hidden md:block" />
                     </div>
                 </div>
             </motion.div>
-            <div className="flex flex-col gap-7.5 mt-12.5">
+            <div className="flex flex-col gap-5 md:gap-7.5 mt-7.5 md:mt-12.5">
                 <Table
                     title={t("product_specifications")}
                     rows={[

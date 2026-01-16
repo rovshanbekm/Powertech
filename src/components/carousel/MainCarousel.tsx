@@ -16,16 +16,18 @@ export default function SimpleSlider() {
         arrows: false,
     };
     return (
-        <Slider {...settings}>
-            <div>
-                <Image src={Banner} alt="Banner"  />
-            </div>
-            <div>
-                <Image src={Banner} alt="Banner" />
-            </div>
-            <div>
-                <Image src={Banner} alt="Banner" />
-            </div>
-        </Slider>
+        <div className="hidden md:block">
+            <Slider {...settings}>
+                <div>
+                    <Image src={Banner} alt="Banner" />
+                </div>
+                <div>
+                    <Image src={Banner} alt="Banner" />
+                </div>
+                <div>
+                    <Image src={Banner} alt="Banner" />
+                </div>
+            </Slider>
+        </div>
     );
 }

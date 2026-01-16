@@ -1,3 +1,4 @@
+import Bg from "@/src/components/BgImage";
 import { AboutCards, ProductCard } from "@/src/components/card";
 import SimpleSlider from "@/src/components/carousel/MainCarousel";
 import { Container } from "@/src/components/container";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <div>
       <SimpleSlider />
+      <Bg />
       <Container>
         <CategoryTabs />
         <ProductCard />
