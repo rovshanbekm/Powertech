@@ -14,8 +14,8 @@ export const Header = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const t = useTranslations()
-  const pathname = usePathname()
-  const isHome = pathname === "/";
+  const segment = useSelectedLayoutSegment()
+  const isHome = segment === null
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,7 +39,7 @@ export const Header = () => {
         className={`
         bg-mainColor w-full py-[9px] mt-7.5
         md:py-7.5 md:mt-0
-         ${isHome ? "absolute top-[1px] z-20" : "relative"}
+         ${isHome ? "absolute top-[1px] z-20 mt-0" : "relative"}
         md:relative md:top-0
       `}
       >
