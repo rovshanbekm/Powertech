@@ -5,10 +5,10 @@ import { ApiProvider } from "../components/provider";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-const assistant  = Assistant({
+const assistant = Assistant({
   variable: "--font-assistant",
   subsets: ["latin"],
-  weight: [ "200", "300", "400", "500", "600", "700", "800"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 export async function generateMetadata({
@@ -29,6 +29,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="shortcut icon" href="/powertechLogo.jpg" type="image/x-icon" />
+      </head>
       <body className={`${assistant.variable} antialiased`}>
         <NextIntlClientProvider>
           <ApiProvider>{children}</ApiProvider>
