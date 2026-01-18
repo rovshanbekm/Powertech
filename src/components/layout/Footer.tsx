@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Send, Youtube, Instagram } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { AppleIcon, PlayMarket } from '../assets';
+import { AppleIcon, Logo, PlayMarket } from '../assets';
+import Image from 'next/image';
 
 export function Footer() {
   const { t, localizedPath } = useLanguage();
@@ -29,9 +30,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2">
             <Link href={localizedPath('/')} className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
                 <span className="text-primary font-bold text-lg"></span>
-              </div>
+              </div> */}
+              <Image src={Logo} alt='PowertechLogo' width={40} />
               <span className="font-bold text-xl tracking-tight">Powertech</span>
             </Link>
 

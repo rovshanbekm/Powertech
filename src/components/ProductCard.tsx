@@ -30,12 +30,12 @@ export function ProductCard({ product, index = 0, viewMode = 'grid' }: ProductCa
           }`}
       >
         {/* Image */}
-        <div className={`relative bg-muted ${viewMode === 'list' ? 'w-38 md:w-48 shrink-0' : 'aspect-square'}`}>
+        <div className={`relative bg-muted ${viewMode === 'list' ? 'w-38 md:w-48 shrink-0' : 'w-full h-60 aspect-square'}`}>
           {product.image ? (
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               loading="lazy"
             />
           ) : (
@@ -46,7 +46,7 @@ export function ProductCard({ product, index = 0, viewMode = 'grid' }: ProductCa
         </div>
 
         {/* Content */}
-        <div className="p-5 flex-1">
+        <div className="p-3 lg:p-5 flex-1">
           <p className="text-muted-foreground text-xs uppercase tracking-wider mb-1">
             {product.category?.name}
           </p>

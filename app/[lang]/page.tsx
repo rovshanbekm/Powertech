@@ -10,6 +10,7 @@ import { Testimonials } from '@/components/sections/Testimonials';
 import { Partners } from '@/components/sections/Partners';
 import { CTA } from '@/components/sections/CTA';
 import type { Language } from '@/lib/types';
+import OurVideos from '@/components/OurVideos';
 
 export default function IndexPage({ params }: { params: { lang: Language } }) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -25,7 +26,8 @@ export default function IndexPage({ params }: { params: { lang: Language } }) {
         />
         <WhyChooseUs />
         <Testimonials />
-        <Partners />
+        {/* <Partners /> */}
+        <OurVideos />
         <CTA />
       </main>
       <Footer />
