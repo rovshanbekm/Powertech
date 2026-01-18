@@ -11,7 +11,7 @@ export default function ContactPage() {
   const { t } = useLanguage();
 
   const contactInfo = [
-    { icon: Phone, title: t.contact.infoItems.phone, lines: ['+998 90 815 72 72', '+998 95 383 13 13'], action: { label: t.contact.infoItems.callAction, href: 'tel:+998901234567' } },
+    { icon: Phone, title: t.contact.infoItems.phone, lines: ['+998 90 815 72 72', '+998 95 383 13 13', '+998 33 955 66 66' ], action: { label: t.contact.infoItems.callAction, href: 'tel:+998901234567' } },
     { icon: Mail, title: t.contact.infoItems.email, lines: ['info@Powertech.uz', 'sales@Powertech.uz'], action: { label: t.contact.infoItems.emailAction, href: 'mailto:info@Powertech.uz' } },
     { icon: MapPin, title: t.contact.infoItems.address, lines: ['Toshkent sh., Chilonzor t.,', "Qatortol ko'chasi, 15-uy"], action: { label: t.contact.infoItems.mapAction, href: 'https://maps.google.com' } },
     { icon: Clock, title: t.contact.infoItems.hours, lines: ['Dush-Shan: 09:00 - 18:00', 'Yakshanba: dam olish'] },
