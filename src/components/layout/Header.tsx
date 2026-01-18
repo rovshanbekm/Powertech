@@ -50,10 +50,31 @@ export function Header() {
 
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
-            <a href="tel:+998339556666" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">{t.header.phone}</span>
-            </a>
+            <div className='flex items-center gap-2'>
+              <Phone className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
+              <select
+                className="bg-transparent text-white/70 text-sm outline-none cursor-pointer"
+                defaultValue="+998339556666"
+                onChange={(e) => {
+                  if (e.target.value) {
+                    window.location.href = `tel:${e.target.value}`;
+                  }
+                }}
+              >
+
+                <option value="+998339556666">
+                  +998 33 955 66 66
+                </option>
+
+                <option value="+998908157272">
+                  +998 90 815 72 72
+                </option>
+
+                <option value="+998953831313">
+                  +998 95 383 13
+                </option>
+              </select>
+            </div>
             <Button variant="accent" size="sm" asChild>
               <Link href={localizedPath('/contact')}>{t.header.contact}</Link>
             </Button>

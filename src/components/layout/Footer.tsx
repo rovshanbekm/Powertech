@@ -10,11 +10,17 @@ export function Footer() {
   const { t, localizedPath } = useLanguage();
 
   const footerLinks = {
+    // products: [
+    //   { name: t.footer.links.barriers, href: localizedPath('/products?category=barriers') },
+    //   { name: t.footer.links.gates, href: localizedPath('/products?category=gates') },
+    //   { name: t.footer.links.remotes, href: localizedPath('/products?category=remotes') },
+    //   { name: t.footer.links.security, href: localizedPath('/products?category=security') },
+    // ],
     products: [
-      { name: t.footer.links.barriers, href: localizedPath('/products?category=barriers') },
-      { name: t.footer.links.gates, href: localizedPath('/products?category=gates') },
-      { name: t.footer.links.remotes, href: localizedPath('/products?category=remotes') },
-      { name: t.footer.links.security, href: localizedPath('/products?category=security') },
+      { name: t.footer.links.barriers, href: localizedPath('/') },
+      { name: t.footer.links.gates, href: localizedPath('/') },
+      { name: t.footer.links.remotes, href: localizedPath('/') },
+      { name: t.footer.links.security, href: localizedPath('/') },
     ],
     company: [
       { name: t.footer.links.about, href: localizedPath('/about') },
@@ -89,7 +95,7 @@ export function Footer() {
                   aria-label="Download on the App Store"
                 >
                   <div className="w-10 h-10 rounded-lg bg-white/10 group-hover:bg-cyan-400/15 flex items-center justify-center transition-colors">
-                  <img src={AppleIcon.src} alt="Play Market" className="w-5 h-5" />
+                    <img src={AppleIcon.src} alt="Play Market" className="w-5 h-5" />
                   </div>
                   <div className="leading-tight">
                     <div className="text-[11px] text-white/70">
@@ -151,11 +157,29 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
-                <div>
-                  <a href="tel:+998339556666" className="text-white/70 hover:text-white text-sm block">
+                <select
+                  className="bg-transparent text-white/70 text-sm outline-none cursor-pointer"
+                  defaultValue="+998339556666"
+                  onChange={(e) => {
+                    if (e.target.value) {
+                      window.location.href = `tel:${e.target.value}`;
+                    }
+                  }}
+                >
+
+                  <option value="+998339556666">
                     +998 33 955 66 66
-                  </a>
-                </div>
+                  </option>
+
+                  <option value="+998908157272">
+                    +998 90 815 72 72
+                  </option>
+
+                  <option value="+998953831313">
+                    +998 95 383 13
+                  </option>
+                </select>
+
               </li>
 
               <li className="flex items-start gap-3">
@@ -178,10 +202,10 @@ export function Footer() {
         <div className="container-wide py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/50 text-sm">{t.footer.copyright}</p>
           <div className="flex gap-6">
-            <Link href={localizedPath('/privacy')} className="text-white/50 hover:text-white text-sm transition-colors">
+            <Link href={localizedPath('/')} className="text-white/50 hover:text-white text-sm transition-colors">
               {t.footer.privacy}
             </Link>
-            <Link href={localizedPath('/terms')} className="text-white/50 hover:text-white text-sm transition-colors">
+            <Link href={localizedPath('/')} className="text-white/50 hover:text-white text-sm transition-colors">
               {t.footer.terms}
             </Link>
           </div>
