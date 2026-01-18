@@ -1,8 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  Powertech - Next.js Landing Page
+
+A modern, multilingual landing page built with Next.js 14 (App Router), TypeScript, and Tailwind CSS.
+
+## Features
+
+- ✅ **Next.js 14** with App Router
+- ✅ **TypeScript** for type safety
+- ✅ **Internationalization (i18n)** - Supports Uzbek (UZ) and Russian (RU) languages
+- ✅ **SEO Optimized** with Next.js metadata API
+- ✅ **Image Optimization** using next/image
+- ✅ **Responsive Design** with Tailwind CSS
+- ✅ **Modern UI Components** with shadcn/ui
+- ✅ **File-based Routing** with language prefixes (/uz, /ru)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+2. Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +46,64 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The app will automatically redirect to `/uz` (default language).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+├── app/                    # Next.js App Router
+│   ├── [lang]/            # Language-based routing
+│   │   ├── page.tsx       # Home page
+│   │   ├── products/      # Products pages
+│   │   ├── about/         # About page
+│   │   ├── contact/       # Contact page
+│   │   └── ...            # Other pages
+│   ├── layout.tsx         # Root layout
+│   └── providers.tsx     # Client providers
+├── src/
+│   ├── components/        # React components
+│   ├── hooks/            # Custom hooks
+│   ├── lib/              # Utilities and types
+│   └── index.css         # Global styles
+├── middleware.ts          # i18n middleware
+├── next.config.js         # Next.js configuration
+└── tailwind.config.ts    # Tailwind configuration
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Routing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app uses language-prefixed routes:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/uz` - Uzbek (default)
+- `/uz/products` - Products page in Uzbek
+- `/ru` - Russian
+- `/ru/products` - Products page in Russian
 
-## Deploy on Vercel
+All routes without a language prefix are automatically redirected to `/uz`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Building for Production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm start
+```
+
+## Environment Variables
+
+Create a `.env.local` file if you need to configure API endpoints or other environment variables.
+
+## Technologies Used
+
+- **Next.js 14** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI components
+- **Framer Motion** - Animations
+- **React Query** - Data fetching
+- **Axios** - HTTP client
+
+## License
+
+Private - All rights reserved
