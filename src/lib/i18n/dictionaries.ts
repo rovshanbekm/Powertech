@@ -64,6 +64,7 @@ export const dictionaries = {
       specifications: 'Texnik xususiyatlar',
       features: 'Asosiy xususiyatlar',
       description: "Ta'rif",
+      title2: "Mahsulotlarimiz haqida"
     },
 
     // Product badges

@@ -153,7 +153,7 @@ export function Footer() {
                 <Phone className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
                 <div>
                   <a href="tel:+998339556666" className="text-white/70 hover:text-white text-sm block">
-                    +998 30 995 66 66
+                    +998 33 955 66 66
                   </a>
                 </div>
               </li>

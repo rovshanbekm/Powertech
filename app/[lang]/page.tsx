@@ -24,10 +24,10 @@ export default function IndexPage({ params }: { params: { lang: Language } }) {
           selectedCategory={selectedCategory}
           onCategoryChange={setSelectedCategory}
         />
+        <OurVideos />
         <WhyChooseUs />
         <Testimonials />
         {/* <Partners /> */}
-        <OurVideos />
         <CTA />
       </main>
       <Footer />

@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 
 const youtubeVideoUrl = [
@@ -26,6 +27,7 @@ const youtubeVideoUrl = [
 
 const OurVideos = () => {
 
+    const { t } = useLanguage();
     const sliderSettings = {
         // autoplay: true,
         // autoplaySpeed: 3000,
@@ -48,6 +50,7 @@ const OurVideos = () => {
     };
     return (
         <div className="container-wide py-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6 text-center">{t.products.title2}</h2>
             <div className="lg:hidden">
                 <Slider {...sliderSettings}>
                     {youtubeVideoUrl.map((item) => (
