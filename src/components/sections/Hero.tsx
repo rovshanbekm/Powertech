@@ -29,26 +29,26 @@ export function Hero() {
               <span className="text-cyan-400 text-sm font-medium">{lang === 'uz' ? "O'zbekistonda №1 avtomatika brendi" : 'Бренд автоматики №1 в Узбекистане'}</span>
             </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6">
               {t.hero.title}
             </h1>
 
             <p className="text-lg md:text-xl text-white/70 mb-8 max-w-xl mx-auto lg:mx-0">{t.hero.subtitle}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="xl" asChild>
+              <Button variant="hero" className='h-14 rounded-xl xl:px-10 text-lg' asChild>
                 <Link href={localizedPath('/products')} className="group">{t.hero.cta}<ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" /></Link>
               </Button>
-              <Button variant="hero-secondary" size="xl" asChild>
+              <Button variant="hero-secondary" className='h-14 rounded-xl xl:px-10 text-lg' asChild>
                 <Link href={localizedPath('/contact')}>{t.hero.ctaSecondary}</Link>
               </Button>
             </div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex flex-wrap gap-8 mt-12 justify-center lg:justify-start">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex  gap-8 mt-12 justify-center pb-3 lg:pb-10 lg:justify-start md:pb-0">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center lg:text-left">
-                  <div className="text-3xl font-bold text-white">{stat.value}</div>
-                  <div className="text-white/60 text-sm">{stat.label}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
+                  <div className="text-white/60 text-[12px] md:text-sm">{stat.label}</div>
                 </div>
               ))}
             </motion.div>

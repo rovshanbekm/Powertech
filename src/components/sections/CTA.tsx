@@ -41,7 +41,7 @@ export function CTA() {
                 </Link>
               </Button>
               <Button variant="hero-secondary" size="lg" asChild>
-                <a href="tel:+998901234567">
+                <a href="tel:+998339556666">
                   <Phone className="w-5 h-5 mr-2" />
                   {t.common.call}
                 </a>

@@ -14,10 +14,10 @@ export default function AboutPage() {
   const { t, lang } = useLanguage();
 
   const stats = [
-    { value: '10+', label: lang === 'uz' ? 'Yillik tajriba' : 'Лет опыта' },
-    { value: '5000+', label: lang === 'uz' ? 'Bajarilgan loyihalar' : 'Выполненных проектов' },
-    { value: '50+', label: lang === 'uz' ? 'Malakali mutaxassislar' : 'Квалифицированных специалистов' },
-    { value: '24/7', label: lang === 'uz' ? 'Texnik yordam' : 'Техническая поддержка' },
+    { value: '5+', label: lang === 'uz' ? 'Yillik tajriba' : 'Лет опыта' },
+    { value: '500+', label: lang === 'uz' ? 'Bajarilgan loyihalar' : 'Выполненных проектов' },
+    { value: '20+', label: lang === 'uz' ? 'Malakali mutaxassislar' : 'Квалифицированных специалистов' },
+    { value: '12/6', label: lang === 'uz' ? 'Texnik yordam' : 'Техническая поддержка' },
   ];
 
   const values = [

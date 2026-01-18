@@ -74,8 +74,8 @@ export default function ProductDetailPage({ params }: { params: { id: string; la
                 </div>
 
                 <div className="flex gap-3">
-                  <Button variant="outline" className="flex-1" asChild><a href="tel:+998901234567"><Phone className="w-4 h-4 mr-2" />{t.common.call}</a></Button>
-                  <Button variant="outline" className="flex-1" asChild><a href="https://t.me/xdPowertech" target="_blank"><MessageCircle className="w-4 h-4 mr-2" />Telegram</a></Button>
+                  <Button variant="outline" className="flex-1" asChild><a href="tel:+998339556666"><Phone className="w-4 h-4 mr-2" />{t.common.call}</a></Button>
+                  <Button variant="outline" className="flex-1" asChild><a href="https://t.me/powertech0" target="_blank"><MessageCircle className="w-4 h-4 mr-2" />Telegram</a></Button>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-border">

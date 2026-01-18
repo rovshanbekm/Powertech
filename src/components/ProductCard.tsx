@@ -4,7 +4,6 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Star } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { formatPrice } from '@/lib/format';
 import type { ProductListItem } from '@/lib/types';
@@ -31,7 +30,7 @@ export function ProductCard({ product, index = 0, viewMode = 'grid' }: ProductCa
           }`}
       >
         {/* Image */}
-        <div className={`relative bg-muted ${viewMode === 'list' ? 'w-48 shrink-0' : 'aspect-square'}`}>
+        <div className={`relative bg-muted ${viewMode === 'list' ? 'w-38 md:w-48 shrink-0' : 'aspect-square'}`}>
           {product.image ? (
             <img
               src={product.image}

@@ -27,7 +27,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-white/10">
       <nav className="container-wide" aria-label="Global">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href={localizedPath("/")} className="flex items-center gap-3">
+          <Link href={localizedPath("/")} className="flex items-center">
             <img
               src="/logo.png"
               alt=" Powertech Logo"
@@ -75,7 +75,7 @@ export function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed top-0 left-0 w-screen h-screen bg-black/50 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setMobileMenuOpen(false)}
             />
             <motion.div
@@ -83,7 +83,7 @@ export function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 bottom-0 w-80 bg-primary z-50 lg:hidden"
+              className="fixed top-0 right-0 w-full bg-primary z-50 lg:hidden"
             >
               <div className="flex items-center justify-between p-4 border-b border-white/10">
                 <span className="text-white font-bold text-lg">Menu</span>
@@ -91,7 +91,7 @@ export function Header() {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-              <div className="p-4 space-y-2">
+              <div className="p-4 space-y-2 bg-primary">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}

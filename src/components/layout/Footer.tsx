@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Send, Youtube, Instagram, Apple, Play } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Youtube, Instagram } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { AppleIcon, PlayMarket } from '../assets';
 
 export function Footer() {
   const { t, localizedPath } = useLanguage();
@@ -25,7 +26,7 @@ export function Footer() {
   return (
     <footer className="bg-primary text-white">
       <div className="container-wide py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2">
             <Link href={localizedPath('/')} className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -86,7 +87,7 @@ export function Footer() {
                   aria-label="Download on the App Store"
                 >
                   <div className="w-10 h-10 rounded-lg bg-white/10 group-hover:bg-cyan-400/15 flex items-center justify-center transition-colors">
-                    <Apple className="w-5 h-5 text-white" />
+                  <img src={AppleIcon.src} alt="Play Market" className="w-5 h-5" />
                   </div>
                   <div className="leading-tight">
                     <div className="text-[11px] text-white/70">
@@ -104,7 +105,7 @@ export function Footer() {
                   aria-label="Get it on Google Play"
                 >
                   <div className="w-10 h-10 rounded-lg bg-white/10 group-hover:bg-cyan-400/15 flex items-center justify-center transition-colors">
-                    <Play className="w-5 h-5 text-white" />
+                    <img src={PlayMarket.src} alt="Play Market" className="w-5 h-5" />
                   </div>
                   <div className="leading-tight">
                     <div className="text-[11px] text-white/70">
@@ -149,16 +150,16 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
                 <div>
-                  <a href="tel:+998901234567" className="text-white/70 hover:text-white text-sm block">
-                    +998 90 123 45 67
+                  <a href="tel:+998339556666" className="text-white/70 hover:text-white text-sm block">
+                    +998 30 995 66 66
                   </a>
                 </div>
               </li>
 
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
-                <a href="mailto:info@xdPowertech.uz" className="text-white/70 hover:text-white text-sm">
-                  info@xdPowertech.uz
+                <a href="mailto:info@Powertech.uz" className="text-white/70 hover:text-white text-sm">
+                  info@Powertech.uz
                 </a>
               </li>
 

@@ -11,8 +11,8 @@ export default function ContactPage() {
   const { t } = useLanguage();
 
   const contactInfo = [
-    { icon: Phone, title: t.contact.infoItems.phone, lines: ['+998 90 123 45 67', '+998 90 123 45 68'], action: { label: t.contact.infoItems.callAction, href: 'tel:+998901234567' } },
-    { icon: Mail, title: t.contact.infoItems.email, lines: ['info@xdPowertech.uz', 'sales@xdPowertech.uz'], action: { label: t.contact.infoItems.emailAction, href: 'mailto:info@xdPowertech.uz' } },
+    { icon: Phone, title: t.contact.infoItems.phone, lines: ['+998 90 815 72 72', '+998 95 383 13 13'], action: { label: t.contact.infoItems.callAction, href: 'tel:+998901234567' } },
+    { icon: Mail, title: t.contact.infoItems.email, lines: ['info@Powertech.uz', 'sales@Powertech.uz'], action: { label: t.contact.infoItems.emailAction, href: 'mailto:info@Powertech.uz' } },
     { icon: MapPin, title: t.contact.infoItems.address, lines: ['Toshkent sh., Chilonzor t.,', "Qatortol ko'chasi, 15-uy"], action: { label: t.contact.infoItems.mapAction, href: 'https://maps.google.com' } },
     { icon: Clock, title: t.contact.infoItems.hours, lines: ['Dush-Shan: 09:00 - 18:00', 'Yakshanba: dam olish'] },
   ];
@@ -57,13 +57,13 @@ export default function ContactPage() {
                 <div className="mt-8">
                   <h3 className="font-semibold text-foreground mb-4">{t.contact.social}</h3>
                   <div className="flex gap-3">
-                    <a href="https://t.me/xdPowertech" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-400/20 flex items-center justify-center transition-colors" aria-label="Telegram">
+                    <a href="https://t.me/powertech0" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-400/20 flex items-center justify-center transition-colors" aria-label="Telegram">
                       <Send className="w-5 h-5" />
                     </a>
-                    <a href="https://youtube.com/@xdPowertech" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-400/20 flex items-center justify-center transition-colors" aria-label="YouTube">
+                    <a href="https://www.youtube.com/@maxvision7192" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-400/20 flex items-center justify-center transition-colors" aria-label="YouTube">
                       <Youtube className="w-5 h-5" />
                     </a>
-                    <a href="https://instagram.com/xdPowertech" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-400/20 flex items-center justify-center transition-colors" aria-label="Instagram">
+                    <a href="https://www.instagram.com/powertech.uz" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-400/20 flex items-center justify-center transition-colors" aria-label="Instagram">
                       <Instagram className="w-5 h-5" />
                     </a>
                   </div>
