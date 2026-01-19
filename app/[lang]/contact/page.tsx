@@ -9,14 +9,14 @@ import { Phone, Mail, MapPin, Clock, Send, ArrowRight, Youtube, Instagram, Faceb
 import { useState } from 'react';
 
 export default function ContactPage() {
-  const { t } = useLanguage();
-  const address = "41.271811, 69.197816, 100135,";
+  const { t, lang } = useLanguage();
+  const address = "41.271811, 69.197816";
 
   const contactInfo = [
     { icon: Phone, title: t.contact.infoItems.phone, lines: ['+998 90 815 72 72', '+998 95 383 13 13', '+998 33 955 66 66', '+998 99 309 80 01'], action: { label: t.contact.infoItems.callAction, href: 'tel:+998901234567' } },
     { icon: Mail, title: t.contact.infoItems.email, lines: ['powertech.uz@gmail.com'], action: { label: t.contact.infoItems.emailAction, href: 'mailto:powertech.uz@gmail.com' } },
     { icon: MapPin, title: t.contact.infoItems.address, lines: [t.location.location], action: { label: t.contact.infoItems.mapAction, href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}` } },
-    { icon: Clock, title: t.contact.infoItems.hours, lines: ['Har kuni: 09:00 - 18:00'] },
+    { icon: Clock, title: t.contact.infoItems.hours, lines: [lang === 'uz'? ['Har kuni: 09:00 - 18:00'] : ['Ежедневно: 09:00 - 18:00'],] },
   ];
   const [selectedPhone, setSelectedPhone] = useState(
     contactInfo[0].lines[0]

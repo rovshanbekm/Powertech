@@ -14,10 +14,10 @@ export default function AboutPage() {
   const { t, lang } = useLanguage();
 
   const stats = [
-    { value: '5+', label: lang === 'uz' ? 'Yillik tajriba' : 'Лет опыта' },
-    { value: '500+', label: lang === 'uz' ? 'Bajarilgan loyihalar' : 'Выполненных проектов' },
-    { value: '20+', label: lang === 'uz' ? 'Malakali mutaxassislar' : 'Квалифицированных специалистов' },
-    { value: '12/6', label: lang === 'uz' ? 'Texnik yordam' : 'Техническая поддержка' },
+    { value: '10+', label: lang === 'uz' ? 'Yillik tajriba' : 'Лет опыта' },
+    { value: '5000+', label: lang === 'uz' ? 'Bajarilgan loyihalar' : 'Выполненных проектов' },
+    { value: '50+', label: lang === 'uz' ? 'Malakali mutaxassislar' : 'Квалифицированных специалистов' },
+    { value: '24/7', label: lang === 'uz' ? 'Texnik yordam' : 'Техническая поддержка' },
   ];
 
   const values = [
@@ -101,8 +101,8 @@ export default function AboutPage() {
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {lang === 'uz'
-                  ? 'O\'zbekistonda avtomatik darvozalar, shlagbaumlar va xavfsizlik tizimlari bo\'yicha yetakchi kompaniya. 10 yildan ortiq tajriba va minglab muvaffaqiyatli loyihalar.'
-                  : 'Ведущая компания в Узбекистане по автоматическим воротам, шлагбаумам и системам безопасности. Более 10 лет опыта и тысячи успешных проектов.'}
+                  ? 'O\'zbekistonda avtomatik darvozalar bo\'yicha yetakchi kompaniya. 10 yildan ortiq tajriba, minglab muvaffaqiyatli loyihalar va butun mamlakat bo\'ylab mijozlarning ishonchi. Biz xususiy uylar, biznes va sanoat obektlari uchun zamonaviy, ishonchli va qulay yechimlar taklif etamiz.'
+                  : 'Ведущая компания в Узбекистане по автоматическим воротам. Более 10 лет опыта, тысячи успешно реализованных проектов и доверие клиентов по всей стране. Мы предлагаем современные, надежные и удобные решения для частных домов, бизнеса и промышленных объектов.'}
               </p>
             </motion.div>
           </div>
@@ -156,13 +156,13 @@ export default function AboutPage() {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {lang === 'uz'
-                    ? 'Biz mijozlarimizga eng zamonaviy avtomatika va xavfsizlik yechimlarini taqdim etish orqali ularning hayotini xavfsiz va qulay qilishga intilamiz. Jahon brendlari bilan hamkorlik va doimiy rivojlanish bizning asosiy tamoyillarimizdir.'
-                    : 'Мы стремимся сделать жизнь наших клиентов безопасной и комфортной, предоставляя им самые современные решения в области автоматики и безопасности. Сотрудничество с мировыми брендами и постоянное развитие — наши основные принципы.'}
+                    ? 'Bizning missiyamiz — mijozlar hayotini ilg\'or avtomatika va xavfsizlik yechimlari orqali xavfsizroq va qulayroq qilishdir. Biz yetakchi jahon brendlari bilan hamkorlik qilamiz va eng yuqori sifat standartlariga javob berish uchun doimiy ravishda rivojlanamiz.'
+                    : 'Наша миссия — делать жизнь клиентов безопаснее и комфортнее, предлагая передовые решения в области автоматики и систем безопасности. Мы сотрудничаем с ведущими мировыми брендами и постоянно развиваемся, чтобы соответствовать самым высоким стандартам качества.'}
                 </p>
                 <ul className="space-y-3">
                   {[
                     lang === 'uz' ? 'Jahon standartlariga mos mahsulotlar' : 'Продукция, соответствующая мировым стандартам',
-                    lang === 'uz' ? '5 yillik rasmiy kafolat' : '5-летняя официальная гарантия',
+                    lang === 'uz' ? '3 yillik rasmiy kafolat' : 'Официальная гарантия до 3 лет',
                     lang === 'uz' ? 'Bepul texnik konsultatsiya' : 'Бесплатная техническая консультация',
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3">

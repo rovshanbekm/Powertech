@@ -6,14 +6,14 @@ export function WhyChooseUs() {
   const { t, lang } = useLanguage();
 
   const benefits = lang === 'uz' ? [
-    { icon: Shield, title: "5 yillik kafolat", description: "Barcha mahsulotlarimizga 5 yillik rasmiy kafolat beramiz" },
+    { icon: Shield, title: "3 yillik kafolat", description: "Barcha mahsulotlarimizga 3 yillik rasmiy kafolat beramiz" },
     { icon: Award, title: "Sertifikatlangan sifat", description: "Xalqaro ISO standartlariga mos keluvchi mahsulotlar" },
     { icon: Wrench, title: "Professional o'rnatish", description: "Tajribali mutaxassislar tomonidan sifatli o'rnatish" },
     { icon: Clock, title: "Tezkor yetkazib berish", description: "Toshkent bo'ylab 24 soat ichida bepul yetkazib berish" },
     { icon: Headphones, title: "24/7 qo'llab-quvvatlash", description: "Doimo aloqadamiz va har qanday savolga javob beramiz" },
     { icon: BadgeCheck, title: "Rasmiy distribyutor", description: "Jahon brendlarining rasmiy vakili" },
   ] : [
-    { icon: Shield, title: "5 лет гарантии", description: "Официальная гарантия 5 лет на всю продукцию" },
+    { icon: Shield, title: "3 года гарантии", description: "Официальная гарантия 3 года на всю продукцию" },
     { icon: Award, title: "Сертифицированное качество", description: "Продукция соответствует международным стандартам ISO" },
     { icon: Wrench, title: "Профессиональный монтаж", description: "Качественная установка опытными специалистами" },
     { icon: Clock, title: "Быстрая доставка", description: "Бесплатная доставка по Ташкенту в течение 24 часов" },

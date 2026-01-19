@@ -10,18 +10,16 @@ export function Footer() {
   const { t, localizedPath } = useLanguage();
 
   const footerLinks = {
-    // products: [
-    //   { name: t.footer.links.barriers, href: localizedPath('/products?category=barriers') },
-    //   { name: t.footer.links.gates, href: localizedPath('/products?category=gates') },
-    //   { name: t.footer.links.remotes, href: localizedPath('/products?category=remotes') },
-    //   { name: t.footer.links.security, href: localizedPath('/products?category=security') },
-    // ],
     products: [
-      { name: t.footer.links.barriers, href: localizedPath('/') },
-      { name: t.footer.links.gates, href: localizedPath('/') },
-      { name: t.footer.links.remotes, href: localizedPath('/') },
-      { name: t.footer.links.security, href: localizedPath('/') },
+      { name: t.footer.links.powertech, href: localizedPath('/products?category=704c2195-128f-4377-8936-e724dec4885d') },
+      { name: t.footer.links.accesories, href: localizedPath('/products?category=729ab18b-e38c-411b-a319-207691329f67') },
+      { name: t.footer.links.domophones, href: localizedPath('/products?category=61df8781-8d30-470a-8518-a2e31a04d7a6') },
     ],
+    // products: [
+    //   { name: t.footer.links.barriers, href: localizedPath('/') },
+    //   { name: t.footer.links.gates, href: localizedPath('/') },
+    //   { name: t.footer.links.remotes, href: localizedPath('/') },
+    // ],
     company: [
       { name: t.footer.links.about, href: localizedPath('/about') },
       { name: t.footer.links.contactPage, href: localizedPath('/contact') },
@@ -98,7 +96,7 @@ export function Footer() {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://apps.apple.com/uz/app/eyeopen-powertech"
+                  href="https://apps.apple.com/uz/app/eyeopen-powertech/id1195096644"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 hover:border-cyan-400/30 px-4 py-3 transition-colors"
@@ -197,8 +195,8 @@ export function Footer() {
 
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
-                <a href="mailto:info@Powertech.uz" className="text-white/70 hover:text-white text-sm">
-                  info@Powertech.uz
+                <a href="mailto:powertech.uz@gmail.com" className="text-white/70 hover:text-white text-sm">
+                  powertech.uz@gmail.com
                 </a>
               </li>
 

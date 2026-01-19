@@ -10,8 +10,8 @@ export function Hero() {
   const { t, localizedPath, lang } = useLanguage();
 
   const stats = lang === 'uz' 
-    ? [{ value: '500+', label: "O'rnatilgan tizimlar" }, { value: '98%', label: 'Mijozlar mamnuniyati' }, { value: '5 yil', label: 'Kafolat muddati' }]
-    : [{ value: '500+', label: 'Установленных систем' }, { value: '98%', label: 'Довольных клиентов' }, { value: '5 лет', label: 'Гарантия' }];
+    ? [{ value: '5000+', label: "O'rnatilgan tizimlar" }, { value: '98%', label: 'Mijozlar mamnuniyati' }, { value: '3 yil', label: 'Kafolat muddati' }]
+    : [{ value: '5000+', label: 'Установленных систем' }, { value: '98%', label: 'Довольных клиентов' }, { value: '3 года', label: 'Гарантия' }];
 
   return (
     <section className="relative min-h-screen flex items-center bg-primary overflow-hidden pt-20">

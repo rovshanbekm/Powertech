@@ -21,7 +21,7 @@ export const dictionaries = {
       all: 'Barchasi',
       price: 'Narx',
       currency: "so'm",
-      inStock: 'Mavjud',
+      inStock: '100+ mavjud',
       outOfStock: 'Mavjud emas',
       send: 'Yuborish',
       call: "Qo'ng'iroq qilish",
@@ -38,7 +38,7 @@ export const dictionaries = {
     // Hero section
     hero: {
       title: 'Avtomatik darvozalar va xavfsizlik tizimlari',
-      subtitle: "O'zbekistondagi eng yaxshi avtomatika brendlarining keng assortimenti. Professional o'rnatish va 5 yil kafolat.",
+      subtitle: "O'zbekistondagi eng yaxshi avtomatika brendlarining keng assortimenti. Professional o'rnatish va 3 yil kafolat.",
       cta: 'Katalogni ko\'rish',
       ctaSecondary: 'Bepul konsultatsiya',
     },
@@ -77,7 +77,7 @@ export const dictionaries = {
 
     // Trust badges
     trust: {
-      warranty: '5 yil kafolat',
+      warranty: '3 yil kafolat',
       delivery: 'Bepul yetkazish',
       installation: "O'rnatish xizmati",
     },
@@ -130,7 +130,7 @@ export const dictionaries = {
 
     // Footer
     footer: {
-      description: 'Avtomatik darvozalar, shlagbaumlar va xavfsizlik tizimlarida O\'zbekistondagi yetakchi kompaniya. Sifat va ishonchlilik kafolati.',
+      description: 'O\'zbekistonda avtomatik darvozalar bo\'yicha yetakchi kompaniya. Sifat va ishonchlilik kafolati.',
       products: 'Mahsulotlar',
       company: 'Kompaniya',
       contact: 'Aloqa',
@@ -141,10 +141,9 @@ export const dictionaries = {
       getItOn: 'Yuklab oling',
       getApp: 'Ilovani yuklab oling',
       links: {
-        barriers: 'Shlagbaumlar',
-        gates: 'Darvoza avtomatikasi',
-        remotes: 'Masofadan boshqarish',
-        security: 'Xavfsizlik tizimlari',
+        powertech: "Powertech",
+        accesories: 'Aksessuarlar',
+        domophones: 'Domofonlar',
         about: 'Biz haqimizda',
         contactPage: "Bog'lanish",
         installation: "O'rnatish xizmati",
@@ -189,8 +188,9 @@ export const dictionaries = {
 
     // Testimonials
     testimonials: {
-      title: 'Mijozlar fikrlari',
-      subtitle: 'Mamnun mijozlarimizning izohlari',
+      subtitle: "Fikrlar",
+      title: "Mijozlarimiz fikrlari",
+      description: "Bizning mijozlarimiz biz haqimizda nima deyishadi",
     },
 
     // Partners
@@ -207,7 +207,7 @@ export const dictionaries = {
     },
 
     location: {
-      location: "Toshkent sh., Chilonzor tumani, Chilonzor massivi, 17-uy, 6-uy",
+      location: "Toshkent sh., Chilonzor tumani, Chilonzor-17, 6-uy",
     }
   },
 
@@ -230,7 +230,7 @@ export const dictionaries = {
       all: 'Все',
       price: 'Цена',
       currency: 'сум',
-      inStock: 'В наличии',
+      inStock: 'В наличии 100+',
       outOfStock: 'Нет в наличии',
       send: 'Отправить',
       call: 'Позвонить',
@@ -247,7 +247,7 @@ export const dictionaries = {
     // Hero section
     hero: {
       title: 'Автоматические ворота и системы безопасности',
-      subtitle: 'Широкий ассортимент лучших брендов автоматики в Узбекистане. Профессиональная установка и 5 лет гарантии.',
+      subtitle: 'Широкий ассортимент лучших брендов автоматики в Узбекистане. Профессиональная установка и 3 года гарантии.',
       cta: 'Смотреть каталог',
       ctaSecondary: 'Бесплатная консультация',
     },
@@ -286,7 +286,7 @@ export const dictionaries = {
 
     // Trust badges
     trust: {
-      warranty: '5 лет гарантии',
+      warranty: '3 года гарантии',
       delivery: 'Бесплатная доставка',
       installation: 'Услуга установки',
     },
@@ -339,7 +339,7 @@ export const dictionaries = {
 
     // Footer
     footer: {
-      description: 'Ведущая компания в Узбекистане по автоматическим воротам, шлагбаумам и системам безопасности. Гарантия качества и надежности.',
+      description: 'Ведущая компания в Узбекистане по автоматическим воротам. Гарантия качества и надежности.',
       products: 'Продукты',
       company: 'Компания',
       contact: 'Контакты',
@@ -350,10 +350,9 @@ export const dictionaries = {
       getItOn: 'Скачайте в',
       getApp: 'Скачайте приложение',
       links: {
-        barriers: 'Шлагбаумы',
-        gates: 'Автоматика для ворот',
-        remotes: 'Дистанционное управление',
-        security: 'Системы безопасности',
+        powertech: 'Powertech',
+        accesories: 'Аксессуары',
+        domophones: 'Домофоны',
         about: 'О нас',
         contactPage: 'Связаться',
         installation: 'Услуга установки',
@@ -398,8 +397,9 @@ export const dictionaries = {
 
     // Testimonials
     testimonials: {
-      title: 'Отзывы клиентов',
-      subtitle: 'Отзывы наших довольных клиентов',
+      subtitle: 'Отзывы',
+      title: 'Мнение наших клиентов',
+      description: 'Что говорят о нас наши клиенты',
     },
 
     // Partners

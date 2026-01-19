@@ -5,39 +5,57 @@ import { Quote, Star } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 
 const testimonials = [
   {
     id: 1,
-    content:
-      "Powertech bilan ishlash juda qulay bo'ldi. Professional jamoalari bizning korxonamiz uchun mukammal yechim topdi. Endi kirish-chiqish nazorati to'liq avtomatlashtirilgan.",
+    content: {
+      uz: "Powertech bilan ishlash juda qulay bo'ldi. Professional jamoalari bizning korxonamiz uchun mukammal yechim topdi. Endi kirish-chiqish nazorati to'liq avtomatlashtirilgan.",
+      ru: "Работать с Powertech было очень удобно. Их профессиональная команда нашла идеальное решение для нашей компании. Теперь контроль доступа полностью автоматизирован.",
+    },
     author: "Rustam Qodirov",
-    role: "Kompaniya direktori",
+    role: {
+      uz: "Kompaniya direktori",
+      ru: "Директор компании",
+    },
     company: "Atlas Group",
     rating: 5,
   },
   {
     id: 2,
-    content:
-      "Uy uchun avtomatik darvoza o'rnatdik. Sifati ajoyib, kafolat muddati ham uzoq. Eng muhimi, texnik xizmat ko'rsatish juda tez va sifatli.",
+    content: {
+      uz: "Uy uchun avtomatik darvoza o'rnatdik. Sifati ajoyib, kafolat muddati ham uzoq. Eng muhimi, texnik xizmat ko'rsatish juda tez va sifatli.",
+      ru: "Установили автоматические ворота для дома. Качество отличное, гарантийный срок длительный. Самое главное - техническое обслуживание очень быстрое и качественное.",
+    },
     author: "Malika Saidova",
-    role: "Uy egasi",
+    role: {
+      uz: "Uy egasi",
+      ru: "Домовладелица",
+    },
     company: "Toshkent",
     rating: 5,
   },
   {
     id: 3,
-    content:
-      "Bizning mehmonxona uchun xavfsizlik tizimini to'liq yangiladik. Powertech jamoasining professionalligi va mas'uliyatliligidan juda mamnunmiz.",
+    content: {
+      uz: "Bizning mehmonxona uchun xavfsizlik tizimini to'liq yangiladik. Powertech jamoasining professionalligi va mas'uliyatliligidan juda mamnunmiz.",
+      ru: "Полностью обновили систему безопасности для нашего отеля. Мы очень довольны профессионализмом и ответственностью команды Powertech.",
+    },
     author: "Bobur Alimov",
-    role: "Boshqaruvchi",
+    role: {
+      uz: "Boshqaruvchi",
+      ru: "Управляющий",
+    },
     company: "Grand Hotel",
     rating: 5,
   },
 ];
 
 export function Testimonials() {
+  const { lang, t } = useLanguage();
+
   const sliderSettings = {
     // autoplay: true,
     // autoplaySpeed: 3000,
@@ -45,6 +63,8 @@ export function Testimonials() {
     arrows: false,
     dots: true,
   };
+
+  const currentLabels = t.testimonials;
 
   return (
     <section className="section-padding bg-primary relative overflow-hidden">
@@ -58,13 +78,13 @@ export function Testimonials() {
           className="text-center mb-12"
         >
           <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">
-            Fikrlar
+            {currentLabels.subtitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-            Mijozlarimiz fikrlari
+            {currentLabels.title}
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            Bizning mijozlarimiz biz haqimizda nima deyishadi
+            {currentLabels.description}
           </p>
         </motion.div>
 
@@ -98,6 +118,8 @@ export function Testimonials() {
 }
 
 function TestimonialCard({ testimonial }: { testimonial: any }) {
+  const { lang } = useLanguage();
+
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 h-full">
       <Quote className="w-10 h-10 text-cyan-400/50 mb-4" />
@@ -112,7 +134,7 @@ function TestimonialCard({ testimonial }: { testimonial: any }) {
       </div>
 
       <p className="text-white/80 mb-6 leading-relaxed">
-        &ldquo;{testimonial.content}&rdquo;
+        &ldquo;{testimonial.content[lang]}&rdquo;
       </p>
 
       <div className="flex items-center gap-3 mt-auto">
@@ -122,7 +144,7 @@ function TestimonialCard({ testimonial }: { testimonial: any }) {
         <div>
           <p className="font-semibold text-white">{testimonial.author}</p>
           <p className="text-white/60 text-sm">
-            {testimonial.role}, {testimonial.company}
+            {testimonial.role[lang]}, {testimonial.company}
           </p>
         </div>
       </div>

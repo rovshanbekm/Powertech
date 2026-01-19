@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 export const metadata: Metadata = {
   title: 'Powertech - Avtomatik darvozalar va xavfsizlik tizimlari',
-  description: 'O\'zbekistondagi eng yaxshi avtomatika brendlarining keng assortimenti. Professional o\'rnatish va 5 yil kafolat.',
+  description: 'O\'zbekistondagi eng yaxshi avtomatika brendlarining keng assortimenti. Professional o\'rnatish va 3 yil kafolat.',
   icons: {
     icon: "/icon.jpg",
     shortcut: "/icon.jpg",
