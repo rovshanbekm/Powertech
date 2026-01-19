@@ -25,7 +25,7 @@ export function Footer() {
     company: [
       { name: t.footer.links.about, href: localizedPath('/about') },
       { name: t.footer.links.contactPage, href: localizedPath('/contact') },
-      { name: t.footer.links.installation, href: localizedPath('/installation') },
+      // { name: t.footer.links.installation, href: localizedPath('/installation') },
       { name: t.footer.links.warranty, href: localizedPath('/warranty') },
     ],
   };
@@ -202,12 +202,12 @@ export function Footer() {
         <div className="container-wide py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/50 text-sm">{t.footer.copyright}</p>
           <div className="flex gap-6">
-            <Link href={localizedPath('/')} className="text-white/50 hover:text-white text-sm transition-colors">
+            {/* <Link href={localizedPath('/')} className="text-white/50 hover:text-white text-sm transition-colors">
               {t.footer.privacy}
             </Link>
             <Link href={localizedPath('/')} className="text-white/50 hover:text-white text-sm transition-colors">
               {t.footer.terms}
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
