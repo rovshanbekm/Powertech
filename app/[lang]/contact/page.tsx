@@ -14,9 +14,9 @@ export default function ContactPage() {
 
   const contactInfo = [
     { icon: Phone, title: t.contact.infoItems.phone, lines: ['+998 90 815 72 72', '+998 95 383 13 13', '+998 33 955 66 66'], action: { label: t.contact.infoItems.callAction, href: 'tel:+998901234567' } },
-    { icon: Mail, title: t.contact.infoItems.email, lines: ['info@Powertech.uz', 'sales@Powertech.uz'], action: { label: t.contact.infoItems.emailAction, href: 'mailto:info@Powertech.uz' } },
+    { icon: Mail, title: t.contact.infoItems.email, lines: ['powertech.uz@gmail.com'], action: { label: t.contact.infoItems.emailAction, href: 'mailto:powertech.uz@gmail.com' } },
     { icon: MapPin, title: t.contact.infoItems.address, lines: [t.location.location], action: { label: t.contact.infoItems.mapAction, href: 'https://sectortechnology.uz/contact' } },
-    { icon: Clock, title: t.contact.infoItems.hours, lines: ['Dush-Shan: 09:00 - 18:00', 'Yakshanba: dam olish'] },
+    { icon: Clock, title: t.contact.infoItems.hours, lines: ['Har kuni: 09:00 - 18:00'] },
   ];
   const [selectedPhone, setSelectedPhone] = useState(
     contactInfo[0].lines[0]
