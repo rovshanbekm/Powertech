@@ -71,7 +71,7 @@ export function Header() {
                 </option>
 
                 <option value="+998953831313">
-                  +998 95 383 13
+                  +998 95 383 13 13
                 </option>
               </select>
             </div>
