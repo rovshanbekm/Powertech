@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Send, Youtube, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Youtube, Instagram, Facebook } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { AppleIcon, Logo, PlayMarket } from '../assets';
 import Image from 'next/image';
@@ -77,6 +77,16 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/share/1ayAKLxRuG/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-400/20 flex items-center justify-center transition-colors"
+                aria-label="Instagram"
+              >
+                <Facebook className="w-5 h-5" />
               </a>
             </div>
 
@@ -177,6 +187,9 @@ export function Footer() {
 
                   <option value="+998953831313">
                     +998 95 383 13 13
+                  </option>
+                  <option value="+998993098001">
+                    +998 99 309 80 01
                   </option>
                 </select>
 

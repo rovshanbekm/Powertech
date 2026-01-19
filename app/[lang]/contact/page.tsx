@@ -5,17 +5,17 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ContactForm } from '@/components/ContactForm';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { Phone, Mail, MapPin, Clock, Send, ArrowRight, Youtube, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, ArrowRight, Youtube, Instagram, Facebook } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ContactPage() {
   const { t } = useLanguage();
-
+  const address = "41.271811, 69.197816, 100135,";
 
   const contactInfo = [
-    { icon: Phone, title: t.contact.infoItems.phone, lines: ['+998 90 815 72 72', '+998 95 383 13 13', '+998 33 955 66 66'], action: { label: t.contact.infoItems.callAction, href: 'tel:+998901234567' } },
+    { icon: Phone, title: t.contact.infoItems.phone, lines: ['+998 90 815 72 72', '+998 95 383 13 13', '+998 33 955 66 66', '+998 99 309 80 01'], action: { label: t.contact.infoItems.callAction, href: 'tel:+998901234567' } },
     { icon: Mail, title: t.contact.infoItems.email, lines: ['powertech.uz@gmail.com'], action: { label: t.contact.infoItems.emailAction, href: 'mailto:powertech.uz@gmail.com' } },
-    { icon: MapPin, title: t.contact.infoItems.address, lines: [t.location.location], action: { label: t.contact.infoItems.mapAction, href: 'https://sectortechnology.uz/contact' } },
+    { icon: MapPin, title: t.contact.infoItems.address, lines: [t.location.location], action: { label: t.contact.infoItems.mapAction, href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}` } },
     { icon: Clock, title: t.contact.infoItems.hours, lines: ['Har kuni: 09:00 - 18:00'] },
   ];
   const [selectedPhone, setSelectedPhone] = useState(
@@ -60,27 +60,19 @@ export default function ContactPage() {
                         {/* 📞 PHONE */}
                         {item.icon === Phone ? (
                           <div className='flex flex-col '>
-                            <select
-                              value={selectedPhone}
-                              onChange={(e) => setSelectedPhone(e.target.value)}
-                              className="bg-transparent text-muted-foreground text-sm outline-none cursor-pointer"
-                            >
-                              {item.lines.map((phone, idx) => (
-                                <option key={idx} value={phone}>
-                                  {phone}
-                                </option>
+                            <h3 className="font-semibold text-foreground mb-1">
+                              {item.lines.map((line, idx) => (
+                                <div key={idx}>
+                                  <a
+                                    href={`tel:${line.replace(/[^+\d]/g, "")}`}
+                                    rel="noopener noreferrer"
+                                    className={`text-sm text-muted-foreground  transition-colors cursor-pointer`}
+                                  >
+                                    {line}
+                                  </a>
+                                </div>
                               ))}
-                            </select>
-
-                            {item.action && (
-                              <a
-                                href={`tel:${selectedPhone.replace(/\s/g, "")}`}
-                                className="inline-flex items-center gap-1 text-cyan-500 text-sm font-medium mt-2 hover:underline"
-                              >
-                                {item.action.label}
-                                <ArrowRight className="w-3 h-3" />
-                              </a>
-                            )}
+                            </h3>
                           </div>
                         ) : (
                           <>
@@ -117,6 +109,15 @@ export default function ContactPage() {
                     </a>
                     <a href="https://www.instagram.com/powertech.uz" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-400/20 flex items-center justify-center transition-colors" aria-label="Instagram">
                       <Instagram className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/share/1ayAKLxRuG/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-400/20 flex items-center justify-center transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <Facebook className="w-5 h-5" />
                     </a>
                   </div>
                 </div>

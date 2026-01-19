@@ -73,6 +73,9 @@ export function Header() {
                 <option value="+998953831313">
                   +998 95 383 13 13
                 </option>
+                <option value="+998993098001">
+                  +998 99 309 80 01
+                </option>
               </select>
             </div>
             <Button variant="accent" size="sm" asChild>
