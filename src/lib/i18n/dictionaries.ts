@@ -53,6 +53,7 @@ export const dictionaries = {
     // Products
     products: {
       title: 'Mahsulotlar katalogi',
+      title2: 'Mahsulotlarimiz haqida video sharh',
       subtitle: 'Eng yaxshi avtomatika brendlarining keng assortimenti',
       featured: 'Eng yaxshi mahsulotlar',
       featuredLabel: 'Mahsulotlar',
@@ -64,7 +65,6 @@ export const dictionaries = {
       specifications: 'Texnik xususiyatlar',
       features: 'Asosiy xususiyatlar',
       description: "Ta'rif",
-      title2: "Mahsulotlarimiz haqida"
     },
 
     // Product badges
@@ -137,6 +137,9 @@ export const dictionaries = {
       privacy: 'Maxfiylik siyosati',
       terms: 'Foydalanish shartlari',
       copyright: '© 2024  Powertech. Barcha huquqlar himoyalangan.',
+      downloadOn: 'Yuklab oling',
+      getItOn: 'Yuklab oling',
+      getApp: 'Ilovani yuklab oling',
       links: {
         barriers: 'Shlagbaumlar',
         gates: 'Darvoza avtomatikasi',
@@ -255,6 +258,7 @@ export const dictionaries = {
     // Products
     products: {
       title: 'Каталог продуктов',
+      title2: 'Видеообзор наших продуктов',
       subtitle: 'Широкий ассортимент лучших брендов автоматики',
       featured: 'Лучшие продукты',
       featuredLabel: 'Продукты',
@@ -338,6 +342,9 @@ export const dictionaries = {
       privacy: 'Политика конфиденциальности',
       terms: 'Условия использования',
       copyright: '© 2024  Powertech. Все права защищены.',
+      downloadOn: 'Загрузите в',
+      getItOn: 'Скачайте в',
+      getApp: 'Скачайте приложение',
       links: {
         barriers: 'Шлагбаумы',
         gates: 'Автоматика для ворот',

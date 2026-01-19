@@ -53,7 +53,7 @@ export function Header() {
             <div className='flex items-center gap-2'>
               <Phone className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
               <select
-                className="bg-transparent text-white/70 text-sm outline-none cursor-pointer"
+                className="bg-primary/95 text-white/70 text-sm outline-none cursor-pointer"
                 defaultValue="+998339556666"
                 onChange={(e) => {
                   if (e.target.value) {

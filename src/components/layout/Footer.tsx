@@ -83,7 +83,7 @@ export function Footer() {
             {/* App badges */}
             <div className="space-y-3">
               <p className="text-white/60 text-xs uppercase tracking-wider">
-                {t.footer?.getApp ?? 'Get the app'}
+                {t.footer.getApp}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -99,7 +99,7 @@ export function Footer() {
                   </div>
                   <div className="leading-tight">
                     <div className="text-[11px] text-white/70">
-                      {t.footer?.downloadOn ?? 'Download on the'}
+                      {t.footer.downloadOn}
                     </div>
                     <div className="text-sm font-semibold">App Store</div>
                   </div>
@@ -117,7 +117,7 @@ export function Footer() {
                   </div>
                   <div className="leading-tight">
                     <div className="text-[11px] text-white/70">
-                      {t.footer?.getItOn ?? 'Get it on'}
+                      {t.footer.getItOn}
                     </div>
                     <div className="text-sm font-semibold">Google Play</div>
                   </div>
@@ -158,7 +158,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
                 <select
-                  className="bg-transparent text-white/70 text-sm outline-none cursor-pointer"
+                  className="bg-primary/95 text-white/70 text-sm outline-none cursor-pointer"
                   defaultValue="+998339556666"
                   onChange={(e) => {
                     if (e.target.value) {
