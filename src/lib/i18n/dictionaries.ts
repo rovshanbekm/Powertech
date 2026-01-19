@@ -205,6 +205,10 @@ export const dictionaries = {
       subtitle: 'Bepul konsultatsiya oling va o\'zingizga mos yechimni toping',
       button: 'Bepul konsultatsiya',
     },
+
+    location: {
+      location: "Toshkent sh., Chilonzor tumani, Chilonzor massivi, 17-uy, 6-uy",
+    }
   },
 
   ru: {
@@ -410,6 +414,10 @@ export const dictionaries = {
       subtitle: 'Получите бесплатную консультацию и найдите подходящее решение',
       button: 'Бесплатная консультация',
     },
+
+    location: {
+      location: "Ташкент, Чиланзарский район, массив Чиланзар, 17-й квартал, 6",
+    }
   },
 } as const;
 
