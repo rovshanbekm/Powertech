@@ -34,86 +34,140 @@ export function PlaceholderPage({ title }: PlaceholderPageProps) {
   const t = content[lang];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background ">
       <Header />
-      <main className="pt-20">
-        <section className="min-h-[70vh] flex items-center justify-center section-padding">
-          <div className="container-wide">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="max-w-lg mx-auto text-center"
-            >
-              {/* Icon */}
-              <motion.div
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.1 }}
-                className="w-24 h-24 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-cyan-400/20 to-cyan-500/20 flex items-center justify-center"
-              >
-                <Construction className="w-12 h-12 text-cyan-500" />
-              </motion.div>
+      <section className="container mx-auto px-4 py-16 max-w-4xl mt-20">
+        {/* PAGE HEADER */}
+        <header className="mb-12">
+          <h1 className="text-3xl font-semibold text-foreground mb-2">
+            Kafolat shartlari
+          </h1>
+          <p className="text-muted-foreground">
+            Powertech Uzbekistan mahsulotlari uchun rasmiy kafolat va xizmat ko‘rsatish qoidalari
+          </p>
+        </header>
 
-              {/* Badge */}
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="inline-block px-4 py-1.5 rounded-full bg-cyan-400/10 text-cyan-500 text-sm font-medium mb-4"
-              >
-                {t.comingSoon}
-              </motion.span>
+        {/* CONTENT */}
+        <div className="space-y-8 text-[15px] leading-7 text-muted-foreground">
 
-              {/* Title */}
-              {title && (
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.25 }}
-                  className="text-muted-foreground text-sm uppercase tracking-wider mb-2"
-                >
-                  {title}
-                </motion.p>
-              )}
-
-              {/* Heading */}
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="text-3xl md:text-4xl font-bold text-foreground mb-4"
-              >
-                {t.heading}
-              </motion.h1>
-
-              {/* Description */}
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="text-muted-foreground leading-relaxed mb-8"
-              >
-                {t.description}
-              </motion.p>
-
-              {/* Action buttons */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4"
-              >
-                <Button variant="accent" size="lg" asChild>
-                  <Link href={localizedPath('/')}>
-                    <Home className="w-4 h-4 mr-2" />
-                    {t.backHome}
-                  </Link>
-                </Button>
-              </motion.div>
-            </motion.div>
+          {/* Umumiy qoidalar */}
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h2 className="text-xl font-medium mb-3 text-foreground">
+              Umumiy qoidalar
+            </h2>
+            <p>
+              Mazkur kafolat shartlari Powertech Uzbekistan kompaniyasi tomonidan
+              sotiladigan va o‘rnatiladigan mahsulotlarga nisbatan amal qiladi.
+              Kafolat O‘zbekiston Respublikasining “Iste’molchilar huquqlarini
+              himoya qilish to‘g‘risida”gi Qonuniga muvofiq taqdim etiladi.
+            </p>
           </div>
-        </section>
-      </main>
+
+          {/* Kafolat muddati */}
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h2 className="text-xl font-medium mb-3 text-foreground">
+              Kafolat muddati
+            </h2>
+            <div className="space-y-2">
+              <p>
+                Powertech Uzbekistan tomonidan yetkazib berilgan va o‘rnatilgan
+                mahsulotlarga 3 (uch) yil kafolat beriladi.
+              </p>
+              <p>
+                Kafolat muddati mahsulot mijozga topshirilgan yoki o‘rnatilgan
+                kundan boshlab hisoblanadi.
+              </p>
+              <p>
+                Kafolat mahsulotdan foydalanish qoidalariga rioya qilingan taqdirda
+                amal qiladi.
+              </p>
+            </div>
+          </div>
+
+          {/* Kafolat doirasiga kiradigan holatlar */}
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h2 className="text-xl font-medium mb-4 text-foreground">
+              Kafolat doirasiga kiradigan holatlar
+            </h2>
+            <ul className="space-y-2">
+              {[
+                "ishlab chiqarishdagi nuqsonlar",
+                "mahsulotning normal ishlashiga to‘sqinlik qiluvchi texnik nosozliklar",
+                "o‘rnatish jarayonida yuzaga kelgan nosozliklar",
+                "elektron yoki mexanik qismlarning zavod nuqsonlari",
+              ].map((item, index) => (
+                <li key={index} className="flex gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-primary shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Kafolat amal qilmaydigan holatlar */}
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h2 className="text-xl font-medium mb-4 text-foreground">
+              Kafolat amal qilmaydigan holatlar
+            </h2>
+            <ul className="space-y-2">
+              {[
+                "mexanik zarba, sinish yoki tashqi shikastlanishlar",
+                "suv, namlik, yong‘in yoki kuchlanishdagi o‘zgarishlar",
+                "tabiiy ofatlar oqibatida yuzaga kelgan nosozliklar",
+                "foydalanish yo‘riqnomasiga amal qilinmagan holatlar",
+                "uchinchi shaxslar tomonidan ochilgan yoki ta’mirlangan mahsulotlar",
+                "original bo‘lmagan ehtiyot qismlar o‘rnatilishi",
+                "normal ekspluatatsiya jarayonida eskiradigan qismlar",
+              ].map((item, index) => (
+                <li key={index} className="flex gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-destructive shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Murojaat tartibi */}
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h2 className="text-xl font-medium mb-3 text-foreground">
+              Kafolat bo‘yicha murojaat qilish tartibi
+            </h2>
+            <div className="space-y-2">
+              <p>
+                Kafolat bo‘yicha murojaat qilish uchun mijoz sotib olish yoki
+                o‘rnatish hujjatini, mahsulotning seriya raqamini hamda nosozlik
+                tavsifini taqdim etishi lozim.
+              </p>
+              <p>
+                Murojaat mahsulot texnik ko‘rikdan o‘tkazilgandan so‘ng ko‘rib
+                chiqiladi.
+              </p>
+            </div>
+          </div>
+
+          {/* Yakuniy qoidalar */}
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h2 className="text-xl font-medium mb-3 text-foreground">
+              Yakuniy qoidalar
+            </h2>
+            <div className="space-y-2">
+              <p>
+                Powertech Uzbekistan kafolat doirasida mahsulotni ta’mirlash yoki
+                almashtirish huquqini o‘zida saqlab qoladi.
+              </p>
+              <p>
+                Kafolat shartlari kompaniya tomonidan oldindan ogohlantirilmasdan
+                yangilanishi mumkin.
+              </p>
+              <p>
+                Mazkur shartlar O‘zbekiston Respublikasi qonunchiligiga muvofiq
+                tartibga solinadi.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
       <Footer />
     </div>
   );
