@@ -9,7 +9,7 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 const youtubeVideoUrl = [
     {
         id: 1,
-        url: "https://youtu.be/uB2FdohgWKI?si=MIe960A9jzelOBx2",
+        url: "https://youtube.com/shorts/QrghdsetDNc?si=UAsuufDC4laaTLE1",
     },
     {
         id: 2,
@@ -39,6 +39,9 @@ const OurVideos = () => {
         if (url.includes("embed")) return url;
 
         if (url.includes("youtu.be")) {
+            return `https://www.youtube.com/embed/${url.split("/").pop()?.split("?")[0]}`;
+        }
+        if (url.includes("shorts")) {
             return `https://www.youtube.com/embed/${url.split("/").pop()?.split("?")[0]}`;
         }
 
