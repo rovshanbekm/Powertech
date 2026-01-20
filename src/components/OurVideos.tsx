@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import YouTube, { YouTubeProps } from 'react-youtube';
+import { useRef } from "react";
 
 
 const youtubeVideoUrl = [
@@ -35,21 +37,64 @@ const OurVideos = () => {
         arrows: false,
         dots: true,
     };
-    const toEmbedUrl = (url: string) => {
-        if (url.includes("embed")) return url;
+    const playersRef = useRef<Record<number, any>>({});
 
-        if (url.includes("youtu.be")) {
-            return `https://www.youtube.com/embed/${url.split("/").pop()?.split("?")[0]}`;
+    const onReady = (id: number) => (event: any) => {
+        playersRef.current[id] = event.target;
+    };
+
+    const onPlay = (id: number) => () => {
+        Object.entries(playersRef.current).forEach(([key, player]) => {
+            if (Number(key) !== id) {
+                player.pauseVideo();
+            }
+        });
+    };
+
+    // agar iframe ishlatilsa quyidagi funksiya kerak bo'ladi
+
+    // const toEmbedUrl = (url: string) => {
+    //     if (url.includes("embed")) return url;
+
+    //     if (url.includes("youtu.be/")) {
+    //         return `https://www.youtube.com/embed/${url.split("/").pop()?.split("?")[0]}`;
+    //     }
+    //     if (url.includes("shorts/")) {
+    //         return `https://www.youtube.com/embed/${url.split("/").pop()?.split("?")[0]}`;
+    //     }
+
+    //     if (url.includes("watch?v=")) {
+    //         return `https://www.youtube.com/embed/${url.split("watch?v=")[1].split("&")[0]}`;
+    //     }
+
+    //     return url;
+    // };
+
+    const getVideoId = (url: string) => {
+        if (url.includes("youtu.be/")) {
+            return url.split("youtu.be/")[1].split("?")[0];
         }
-        if (url.includes("shorts")) {
-            return `https://www.youtube.com/embed/${url.split("/").pop()?.split("?")[0]}`;
+
+        if (url.includes("shorts/")) {
+            return url.split("shorts/")[1].split("?")[0];
         }
 
         if (url.includes("watch?v=")) {
-            return `https://www.youtube.com/embed/${url.split("watch?v=")[1].split("&")[0]}`;
+            return url.split("watch?v=")[1].split("&")[0];
         }
 
-        return url;
+        return "";
+    };
+
+    const opts: YouTubeProps['opts'] = {
+        width: "100%",
+        height: "100%",
+        playerVars: {
+            mute: 1,   
+            controls: 1,
+            rel: 0,
+            modestbranding: 1,
+        },
     };
     return (
         <div className="container-wide py-12">
@@ -57,16 +102,14 @@ const OurVideos = () => {
             <div className="lg:hidden">
                 <Slider {...sliderSettings}>
                     {youtubeVideoUrl.map((item) => (
-                        <div key={item.id} className="px-2">
-                            <iframe
-                                width="100%"
-                                height="400"
-                                src={toEmbedUrl(item.url)}
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
+                        <div key={item.id} className="w-full h-[400px] px-0">
+                            <YouTube
+                                videoId={getVideoId(item.url)}
+                                opts={opts}
+                                onReady={() => onReady(item.id)}
+                                onPlay={() => onPlay(item.id)}
+                                className="w-full h-full"
+                            />
                         </div>
                     ))}
                 </Slider>
@@ -81,15 +124,7 @@ const OurVideos = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
                     >
-                        <iframe
-                            width="100%"
-                            height="300"
-                            src={toEmbedUrl(item.url)}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
+                        <YouTube videoId={getVideoId(item.url)} opts={opts} onReady={onReady(item.id)} onPlay={onPlay(item.id)} className="w-full h-[300px]" />
                     </motion.div>
                 ))}
             </div>
