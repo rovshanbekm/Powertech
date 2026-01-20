@@ -62,18 +62,18 @@ export function Header() {
                 }}
               >
 
-                <option value="+998339556666">
+                <option value="+998339556666" className="bg-primary text-white">
                   +998 33 955 66 66
                 </option>
 
-                <option value="+998908157272">
+                <option value="+998908157272" className="bg-primary text-white">
                   +998 90 815 72 72
                 </option>
 
-                <option value="+998953831313">
+                <option value="+998953831313" className="bg-primary text-white">
                   +998 95 383 13 13
                 </option>
-                <option value="+998993098001">
+                <option value="+998993098001" className="bg-primary text-white">
                   +998 99 309 80 01
                 </option>
               </select>
