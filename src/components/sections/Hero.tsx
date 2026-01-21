@@ -2,14 +2,15 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Cpu, Factory, Rocket, Settings, Shield, ShieldCheck, Timer, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { PowertechLogo } from '../assets';
 
 export function Hero() {
   const { t, localizedPath, lang } = useLanguage();
 
-  const stats = lang === 'uz' 
+  const stats = lang === 'uz'
     ? [{ value: '5000+', label: "O'rnatilgan tizimlar" }, { value: '98%', label: 'Mijozlar mamnuniyati' }, { value: '3 yil', label: 'Kafolat muddati' }]
     : [{ value: '5000+', label: 'Установленных систем' }, { value: '98%', label: 'Довольных клиентов' }, { value: '3 года', label: 'Гарантия' }];
 
@@ -54,6 +55,7 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
+          {/* o'ng tomondigi malumot */}
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="relative hidden lg:block">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/30 to-cyan-600/20 rounded-3xl blur-3xl scale-95" />
@@ -61,20 +63,20 @@ export function Hero() {
                 <div className="aspect-[4/3] bg-gradient-to-br from-navy-light to-primary rounded-2xl flex items-center justify-center overflow-hidden">
                   <div className="text-center">
                     <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center">
-                      <Zap className="w-16 h-16 text-primary" />
+                      <img src={PowertechLogo.src} alt="" />
                     </div>
                     <p className="text-white/60 text-sm">{lang === 'uz' ? 'Premium avtomatika' : 'Премиум автоматика'}</p>
                   </div>
                 </div>
                 <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 }} className="absolute -left-8 top-1/4 bg-white rounded-xl px-4 py-3 shadow-lg">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center"><Shield className="w-4 h-4 text-green-600" /></div>
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center"><ShieldCheck className="w-4 h-4 text-green-600" /></div>
                     <div><p className="text-xs text-muted-foreground">{lang === 'uz' ? 'Xavfsizlik' : 'Безопасность'}</p><p className="text-sm font-semibold text-foreground">{lang === 'uz' ? 'Kafolatlangan' : 'Гарантировано'}</p></div>
                   </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }} className="absolute -right-4 bottom-1/4 bg-white rounded-xl px-4 py-3 shadow-lg">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center"><Zap className="w-4 h-4 text-cyan-600" /></div>
+                    <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center"><Timer className="w-4 h-4 text-cyan-600" /></div>
                     <div><p className="text-xs text-muted-foreground">{lang === 'uz' ? 'Tezkor' : 'Быстрый'}</p><p className="text-sm font-semibold text-foreground">{lang === 'uz' ? "O'rnatish" : 'Монтаж'}</p></div>
                   </div>
                 </motion.div>
@@ -86,7 +88,7 @@ export function Hero() {
 
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-          <path d="M0 120L60 110C120 100 240 80 360 75C480 70 600 80 720 85C840 90 960 90 1080 85C1200 80 1320 70 1380 65L1440 60V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="hsl(210 25% 98%)"/>
+          <path d="M0 120L60 110C120 100 240 80 360 75C480 70 600 80 720 85C840 90 960 90 1080 85C1200 80 1320 70 1380 65L1440 60V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="hsl(210 25% 98%)" />
         </svg>
       </div>
     </section>
