@@ -54,7 +54,7 @@ const testimonials = [
 ];
 
 export function Testimonials() {
-  const { lang, t } = useLanguage();
+  const { t } = useLanguage();
 
   const sliderSettings = {
     // autoplay: true,
