@@ -16,7 +16,7 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, index = 0, viewMode = 'grid' }: ProductCardProps) {
-  const { lang, localizedPath } = useLanguage();
+  const { lang, localizedPath, t } = useLanguage();
 
   return (
     <motion.div
@@ -69,7 +69,7 @@ export function ProductCard({ product, index = 0, viewMode = 'grid' }: ProductCa
     hover:gap-3 hover:text-primary/80
   "
             >
-              Batafsil ko‘rish
+              {t.common.productDetail}
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>

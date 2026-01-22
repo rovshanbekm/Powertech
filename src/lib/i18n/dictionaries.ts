@@ -29,6 +29,7 @@ export const dictionaries = {
       productsFound: 'ta mahsulot topildi',
       linkCopied: 'Havola nusxalandi',
       productsNotFound: "Mahsulotlar topilmadi",
+      productDetail: "Batafsil ko‘rish"
     },
 
     // Header
@@ -240,6 +241,7 @@ export const dictionaries = {
       productsFound: 'товаров найдено',
       linkCopied: 'Ссылка скопирована',
       productsNotFound: "Товары не найдены",
+      productDetail: "Подробнее"
     },
 
     // Header
