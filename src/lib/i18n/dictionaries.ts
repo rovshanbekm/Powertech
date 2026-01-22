@@ -17,6 +17,7 @@ export const dictionaries = {
       error: 'Xatolik yuz berdi',
       retry: 'Qayta urinish',
       viewAll: "Barchasini ko'rish",
+      viewAllProducts: "Hamma mahsuloti korish",
       view: "Ko'rish",
       all: 'Barchasi',
       price: 'Narx',
@@ -27,6 +28,7 @@ export const dictionaries = {
       call: "Qo'ng'iroq qilish",
       productsFound: 'ta mahsulot topildi',
       linkCopied: 'Havola nusxalandi',
+      productsNotFound: "Mahsulotlar topilmadi",
     },
 
     // Header
@@ -226,6 +228,7 @@ export const dictionaries = {
       error: 'Произошла ошибка',
       retry: 'Повторить',
       viewAll: 'Посмотреть все',
+      viewAllProducts: "Посмотреть все продукты",
       view: 'Смотреть',
       all: 'Все',
       price: 'Цена',
@@ -236,6 +239,7 @@ export const dictionaries = {
       call: 'Позвонить',
       productsFound: 'товаров найдено',
       linkCopied: 'Ссылка скопирована',
+      productsNotFound: "Товары не найдены",
     },
 
     // Header

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { formatPrice } from '@/lib/format';
 import type { ProductListItem } from '@/lib/types';
+import { ArrowRight } from 'lucide-react';
 
 interface ProductCardProps {
   product: ProductListItem;
@@ -55,9 +56,23 @@ export function ProductCard({ product, index = 0, viewMode = 'grid' }: ProductCa
           </h3>
 
           {/* Price */}
-          <span className="text-lg font-bold text-foreground">
-            {formatPrice(product.price, lang)}
-          </span>
+          <div className='flex items-center justify-between'>
+            <span className="text-lg font-bold text-foreground">
+              {formatPrice(product.price, lang)}
+            </span>
+            <Link
+              href={localizedPath(`/products/${product.id}`)}
+              className="
+    group inline-flex items-center gap-2
+    text-primary font-semibold
+    transition-all duration-300
+    hover:gap-3 hover:text-primary/80
+  "
+            >
+              Batafsil ko‘rish
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
       </Link>
     </motion.div>

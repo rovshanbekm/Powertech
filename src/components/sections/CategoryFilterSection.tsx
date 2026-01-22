@@ -1,10 +1,12 @@
 // Category filter section with in-place product filtering
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Wifi, Key, Camera, DoorOpen, Gauge, Loader2 } from 'lucide-react';
+import { Shield, Wifi, Key, Camera, DoorOpen, Gauge, Loader2 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useCategories, useProducts } from '@/hooks/useProducts';
 import { ProductCard } from '@/components/ProductCard';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const categoryIcons: Record<string, any> = {
   gates: DoorOpen,
@@ -30,7 +32,7 @@ interface CategoryFilterSectionProps {
 }
 
 export function CategoryFilterSection({ selectedCategory, onCategoryChange }: CategoryFilterSectionProps) {
-  const { t } = useLanguage();
+  const { t, localizedPath } = useLanguage();
   const { data: categories, isLoading: isCategoriesLoading } = useCategories();
   const { data: products, isLoading: isProductsLoading, isFetching } = useProducts(selectedCategory || undefined);
 
@@ -40,10 +42,10 @@ export function CategoryFilterSection({ selectedCategory, onCategoryChange }: Ca
     <section className="section-padding bg-background">
       <div className="container-wide">
         {/* Section header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true }} 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center mb-8"
         >
           <span className="text-cyan-500 font-semibold text-sm uppercase tracking-wider">{t.categories.label}</span>
@@ -58,11 +60,10 @@ export function CategoryFilterSection({ selectedCategory, onCategoryChange }: Ca
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => onCategoryChange(null)}
-            className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
-              selectedCategory === null
+            className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${selectedCategory === null
                 ? 'bg-gradient-to-r from-cyan-400 to-cyan-500 text-primary shadow-lg'
                 : 'bg-muted text-muted-foreground hover:bg-muted/80'
-            }`}
+              }`}
           >
             {t.common.all}
           </motion.button>
@@ -76,18 +77,17 @@ export function CategoryFilterSection({ selectedCategory, onCategoryChange }: Ca
           ) : (
             categories?.map((category, index) => {
               const Icon = categoryIcons[Object.keys(categoryIcons)[index % 6]] || DoorOpen;
-              
+
               return (
                 <motion.button
                   key={category.id}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => onCategoryChange(category.id)}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
-                    selectedCategory === category.id
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all ${selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-400 to-cyan-500 text-primary shadow-lg'
                       : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                  }`}
+                    }`}
                 >
                   <Icon className="w-4 h-4" />
                   {category.name}
@@ -106,9 +106,9 @@ export function CategoryFilterSection({ selectedCategory, onCategoryChange }: Ca
         )}
 
         {/* Products grid */}
-        <motion.div 
-          initial={{ opacity: 0 }} 
-          animate={{ opacity: isFetching ? 0.5 : 1 }} 
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isFetching ? 0.5 : 1 }}
           transition={{ duration: 0.2 }}
         >
           {isProductsLoading ? (
@@ -125,19 +125,21 @@ export function CategoryFilterSection({ selectedCategory, onCategoryChange }: Ca
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-muted-foreground">{t.common.error}</p>
+              <p className="text-muted-foreground">{t.common.productsNotFound}</p>
             </div>
+
           )}
         </motion.div>
+        <Link href={localizedPath('/products')} className='flex justify-center mt-5'><Button className=''>{t.common.viewAllProducts}</Button></Link>
 
         {/* Results count */}
         {!isProductsLoading && products && products.length > 0 && (
-          <motion.p 
-            initial={{ opacity: 0 }} 
+          <motion.p
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center text-sm text-muted-foreground mt-6"
           >
-            {products.length} {t.common.productsFound}
+            {/* {products.length} {t.common.productsFound} */}
           </motion.p>
         )}
       </div>
