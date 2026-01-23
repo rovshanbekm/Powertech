@@ -56,7 +56,7 @@ export function ProductCard({ product, index = 0, viewMode = 'grid' }: ProductCa
           </h3>
 
           {/* Price */}
-          <div className='flex items-center justify-between'>
+          <div className='flex flex-col md:flex-row md:items-center justify-between'>
             <span className="text-lg font-bold text-foreground">
               {formatPrice(product.price, lang)}
             </span>
