@@ -13,6 +13,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const { t, localizedPath } = useLanguage();
+  if (!t?.nav) return null;
 
   const navigation = [
     { name: t.nav.home, href: localizedPath('/') },

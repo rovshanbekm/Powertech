@@ -9,6 +9,7 @@ import { PowertechLogo } from '../assets';
 
 export function Hero() {
   const { t, localizedPath, lang } = useLanguage();
+  if (!t?.hero) return null;
 
   const stats = lang === 'uz'
     ? [{ value: '5000+', label: "O'rnatilgan tizimlar" }, { value: '98%', label: 'Mijozlar mamnuniyati' }, { value: '3 yil', label: 'Kafolat muddati' }]
