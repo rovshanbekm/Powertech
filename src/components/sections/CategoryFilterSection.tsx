@@ -48,9 +48,9 @@ export function CategoryFilterSection({ selectedCategory, onCategoryChange }: Ca
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <span className="text-cyan-500 font-semibold text-sm uppercase tracking-wider">{t.categories.label}</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">{t.categories.title}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{t.categories.subtitle}</p>
+          <span className="text-cyan-500 font-semibold text-sm uppercase tracking-wider">{t?.categories.label}</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">{t?.categories.title}</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{t?.categories.subtitle}</p>
         </motion.div>
 
         {/* Category filter buttons */}
@@ -65,7 +65,7 @@ export function CategoryFilterSection({ selectedCategory, onCategoryChange }: Ca
                 : 'bg-muted text-muted-foreground hover:bg-muted/80'
               }`}
           >
-            {t.common.all}
+            {t?.common.all}
           </motion.button>
 
           {isCategoriesLoading ? (
@@ -101,7 +101,7 @@ export function CategoryFilterSection({ selectedCategory, onCategoryChange }: Ca
         {isFetching && (
           <div className="flex items-center justify-center gap-2 mb-6 text-muted-foreground">
             <Loader2 className="w-5 h-5 animate-spin" />
-            <span className="text-sm">{t.common.loading}</span>
+            <span className="text-sm">{t?.common.loading}</span>
           </div>
         )}
 
@@ -125,12 +125,12 @@ export function CategoryFilterSection({ selectedCategory, onCategoryChange }: Ca
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-muted-foreground">{t.common.productsNotFound}</p>
+              <p className="text-muted-foreground">{t?.common.productsNotFound}</p>
             </div>
 
           )}
         </motion.div>
-        <Link href={localizedPath('/products')} className='flex justify-center mt-5'><Button className=''>{t.common.viewAllProducts}</Button></Link>
+        <Link href={localizedPath('/products')} className='flex justify-center mt-5'><Button className=''>{t?.common.viewAllProducts}</Button></Link>
 
         {/* Results count */}
         {!isProductsLoading && products && products.length > 0 && (

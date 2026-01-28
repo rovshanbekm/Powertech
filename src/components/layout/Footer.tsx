@@ -11,9 +11,9 @@ export function Footer() {
 
   const footerLinks = {
     products: [
-      { name: t.footer.links.powertech, href: localizedPath('/products?category=704c2195-128f-4377-8936-e724dec4885d') },
-      { name: t.footer.links.accesories, href: localizedPath('/products?category=729ab18b-e38c-411b-a319-207691329f67') },
-      { name: t.footer.links.domophones, href: localizedPath('/products?category=61df8781-8d30-470a-8518-a2e31a04d7a6') },
+      { name: t?.footer.links.powertech, href: localizedPath('/products?category=704c2195-128f-4377-8936-e724dec4885d') },
+      { name: t?.footer.links.accesories, href: localizedPath('/products?category=729ab18b-e38c-411b-a319-207691329f67') },
+      { name: t?.footer.links.domophones, href: localizedPath('/products?category=61df8781-8d30-470a-8518-a2e31a04d7a6') },
     ],
     // products: [
     //   { name: t.footer.links.barriers, href: localizedPath('/') },
@@ -21,10 +21,10 @@ export function Footer() {
     //   { name: t.footer.links.remotes, href: localizedPath('/') },
     // ],
     company: [
-      { name: t.footer.links.about, href: localizedPath('/about') },
-      { name: t.footer.links.contactPage, href: localizedPath('/contact') },
+      { name: t?.footer.links.about, href: localizedPath('/about') },
+      { name: t?.footer.links.contactPage, href: localizedPath('/contact') },
       // { name: t.footer.links.installation, href: localizedPath('/installation') },
-      { name: t.footer.links.warranty, href: localizedPath('/warranty') },
+      { name: t?.footer.links.warranty, href: localizedPath('/warranty') },
     ],
   };
 
@@ -42,7 +42,7 @@ export function Footer() {
             </Link>
 
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm">
-              {t.footer.description}
+              {t?.footer.description}
             </p>
 
             {/* Social links */}
@@ -91,7 +91,7 @@ export function Footer() {
             {/* App badges */}
             <div className="space-y-3">
               <p className="text-white/60 text-xs uppercase tracking-wider">
-                {t.footer.getApp}
+                {t?.footer.getApp}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -107,7 +107,7 @@ export function Footer() {
                   </div>
                   <div className="leading-tight">
                     <div className="text-[11px] text-white/70">
-                      {t.footer.downloadOn}
+                      {t?.footer.downloadOn}
                     </div>
                     <div className="text-sm font-semibold">App Store</div>
                   </div>
@@ -125,7 +125,7 @@ export function Footer() {
                   </div>
                   <div className="leading-tight">
                     <div className="text-[11px] text-white/70">
-                      {t.footer.getItOn}
+                      {t?.footer.getItOn}
                     </div>
                     <div className="text-sm font-semibold">Google Play</div>
                   </div>
@@ -135,7 +135,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t.footer.products}</h4>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t?.footer.products}</h4>
             <ul className="space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
@@ -148,7 +148,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t.footer.company}</h4>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t?.footer.company}</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -161,7 +161,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t.footer.contact}</h4>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t?.footer.contact}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
@@ -202,7 +202,7 @@ export function Footer() {
 
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-1 text-cyan-400 shrink-0" />
-                <span className="text-white/70 text-sm">{t.location.location}</span>
+                <span className="text-white/70 text-sm">{t?.location.location}</span>
               </li>
             </ul>
           </div>
@@ -211,7 +211,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-wide py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/50 text-sm">{t.footer.copyright}</p>
+          <p className="text-white/50 text-sm">{t?.footer.copyright}</p>
           <div className="flex gap-6">
             {/* <Link href={localizedPath('/')} className="text-white/50 hover:text-white text-sm transition-colors">
               {t.footer.privacy}

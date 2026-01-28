@@ -85,7 +85,7 @@ const OurVideos = () => {
 
     return (
         <div className="container-wide py-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6 text-center">{t.products.title2}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6 text-center">{t?.products.title2}</h2>
 
             <div className="lg:hidden">
                 <Slider {...settings}>

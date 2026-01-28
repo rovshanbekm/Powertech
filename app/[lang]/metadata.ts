@@ -9,7 +9,7 @@ export function generateMetadata(lang: Language): Metadata {
     title: lang === 'uz'
       ? ' Powertech - Avtomatik darvozalar va xavfsizlik tizimlari'
       : ' Powertech - Автоматические ворота и системы безопасности',
-    description: t.hero.subtitle,
+    description: t?.hero.subtitle,
     keywords: lang === 'uz'
       ? 'avtomatik darvozalar, shlagbaumlar, xavfsizlik tizimlari, avtomatika, O\'zbekiston'
       : 'автоматические ворота, шлагбаумы, системы безопасности, автоматика, Узбекистан',
@@ -17,7 +17,7 @@ export function generateMetadata(lang: Language): Metadata {
       title: lang === 'uz'
         ? ' Powertech - Avtomatik darvozalar va xavfsizlik tizimlari'
         : ' Powertech - Автоматические ворота и системы безопасности',
-      description: t.hero.subtitle,
+      description: t?.hero.subtitle,
       type: 'website',
     },
   };

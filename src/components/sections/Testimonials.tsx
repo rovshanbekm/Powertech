@@ -64,7 +64,7 @@ export function Testimonials() {
     dots: true,
   };
 
-  const currentLabels = t.testimonials;
+  const currentLabels = t?.testimonials;
 
   return (
     <section className="section-padding bg-primary relative overflow-hidden">
@@ -78,13 +78,13 @@ export function Testimonials() {
           className="text-center mb-12"
         >
           <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">
-            {currentLabels.subtitle}
+            {currentLabels?.subtitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-            {currentLabels.title}
+            {currentLabels?.title}
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            {currentLabels.description}
+            {currentLabels?.description}
           </p>
         </motion.div>
 

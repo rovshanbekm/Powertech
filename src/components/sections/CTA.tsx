@@ -26,24 +26,24 @@ export function CTA() {
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
             <div className="text-center lg:text-left flex-1">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
-                {t.cta.title}
+                {t?.cta.title}
               </h2>
               <p className="text-white/70 max-w-xl text-base md:text-lg leading-relaxed">
-                {t.cta.subtitle}
+                {t?.cta.subtitle}
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 shrink-0">
               <Button variant="hero" size="lg" asChild className="shadow-lg shadow-cyan-500/20">
                 <Link href={localizedPath('/contact')} className="group">
-                  {t.cta.button}
+                  {t?.cta.button}
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
               <Button variant="hero-secondary" size="lg" asChild>
                 <a href="tel:+998339556666">
                   <Phone className="w-5 h-5 mr-2" />
-                  {t.common.call}
+                  {t?.common.call}
                 </a>
               </Button>
             </div>
